@@ -1,0 +1,1 @@
+--cpp -c --cpu Cortex-M3 -g -O2 --apcs=interwork --signed_chars -I..\GPSbot -I.\Source -I "C:\Keil\\ARM\INC" -I "C:\Keil\\ARM\INC\NXP\LPC17xx" -DTARGET_LPC1768 -o ".\Output\cuart2.o" --omf_browse ".\Output\cuart2.crf" --depend ".\Output\cuart2.d" "Source\Resources\serial\CUart2.cpp"

@@ -1,0 +1,39 @@
+*** Creating Trace Output File '.\Output\GPSbot.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\output\main.o"'
+### List of Objects: adding '".\output\pccomm.o"'
+### List of Objects: adding '"C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbedLibrary\lib26\LPC1768\cmsis_nvic.o"'
+### List of Objects: adding '"C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbedLibrary\lib26\LPC1768\core_cm3.o"'
+### List of Objects: adding '"C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbedLibrary\lib26\LPC1768\stackheap.o"'
+### List of Objects: adding '"C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbedLibrary\lib26\LPC1768\startup_LPC17xx.o"'
+### List of Objects: adding '"C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbedLibrary\lib26\LPC1768\system_LPC17xx.o"'
+### List of Objects: adding '".\Source\mbedLibrary\lib26\LPC1768\capi.ar"'
+### List of Objects: adding '".\Source\mbedLibrary\lib26\LPC1768\mbed.ar"'
+### List of Objects: adding '".\output\cdcompass.o"'
+### List of Objects: adding '".\output\cgps.o"'
+### List of Objects: adding '".\output\cnmea.o"'
+### List of Objects: adding '".\output\cservo.o"'
+### List of Objects: adding '".\output\csrf05.o"'
+### List of Objects: adding '".\output\cspeed.o"'
+### List of Objects: adding '".\output\cbuffer.o"'
+### List of Objects: adding '".\output\cuart0.o"'
+### List of Objects: adding '".\output\cuart1.o"'
+### List of Objects: adding '".\output\cuart2.o"'
+### List of Objects: adding '".\output\cuart3.o"'
+### List of Objects: adding '".\output\c2y0a700.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 ".\output\main.o" ".\output\pccomm.o" "C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbedLibrary\lib26\LPC1768\cmsis_nvic.o" "C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbedLibrary\lib26\LPC1768\core_cm3.o" "C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbedLibrary\lib26\LPC1768\stackheap.o" "C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbedLibrary\lib26\LPC1768\startup_LPC17xx.o" "C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbedLibrary\lib26\LPC1768\system_LPC17xx.o" ".\Source\mbedLibrary\lib26\LPC1768\capi.ar" ".\Source\mbedLibrary\lib26\LPC1768\mbed.ar" ".\output\cdcompass.o" ".\output\cgps.o" ".\output\cnmea.o" ".\output\cservo.o" ".\output\csrf05.o" ".\output\cspeed.o" ".\output\cbuffer.o" ".\output\cuart0.o" ".\output\cuart1.o" ".\output\cuart2.o" ".\output\cuart3.o" ".\output\c2y0a700.o" --strict --scatter ".\Source\mbedLibrary\lib26\LPC1768\LPC1768.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\GPSbot.map" -o ".\Output\GPSbot.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\Output\GPSbot.axf'
+### ADS-LD Command File: '.\Output\GPSbot.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\Output\GPSbot.lnp', Handle=0x000007A0
+### Writing '.lnp' file
+### ADS-LD Command file '.\Output\GPSbot.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

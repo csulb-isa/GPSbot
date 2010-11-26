@@ -1,0 +1,1 @@
+--cpp -c --cpu Cortex-M3 -g -O2 --apcs=interwork --signed_chars -I..\GPSbot -I.\Source -I "C:\Keil\\ARM\INC" -I "C:\Keil\\ARM\INC\NXP\LPC17xx" -DTARGET_LPC1768 -o ".\Output\cservo.o" --omf_browse ".\Output\cservo.crf" --depend ".\Output\cservo.d" "Source\Resources\servo\CServo.cpp"

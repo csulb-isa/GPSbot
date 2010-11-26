@@ -1,0 +1,573 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\GPSbot.uvproj
+Project File Date:  11/26/2010
+
+<h2>Output:</h2>
+Build target 'GPSbot'
+compiling main.cpp...
+Source\.\.\Resources\serial\CUart.h(5): error:  #5: cannot open source input file ".\mbed Library\PinNames.h": No such file or directory
+compiling pccomm.cpp...
+Source\main.h(5): error:  #5: cannot open source input file ".\mbed Library\mbed.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\.\.\Resources\serial\CUart.h(6): error:  #5: cannot open source input file "PinNames.h": No such file or directory
+compiling pccomm.cpp...
+Source\main.h(5): error:  #5: cannot open source input file ".\mbed Library\mbed.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\.\.\Resources\serial\CUart.h(6): error:  #5: cannot open source input file "PinNames.h": No such file or directory
+compiling pccomm.cpp...
+Source\main.h(5): error:  #5: cannot open source input file ".\mbed Library\mbed.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\.\.\Resources\serial\CUart.h(5): error:  #5: cannot open source input file ".\mbed Library\PinNames.h": No such file or directory
+compiling pccomm.cpp...
+Source\main.h(5): error:  #5: cannot open source input file ".\mbed Library\mbed.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+.\Source\.\mbedLibrary\cmsis.h(12): error:  #5: cannot open source input file "..\mbed Library\lib26\LPC1768\LPC17xx.h": No such file or directory
+compiling pccomm.cpp...
+Source\main.h(5): error:  #5: cannot open source input file ".\mbed Library\mbed.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\.\.\Resources\serial\CUart.h(7): error:  #5: cannot open source input file ".\classes\CBuffer.h": No such file or directory
+compiling pccomm.cpp...
+Source\main.h(5): error:  #5: cannot open source input file ".\mbed Library\mbed.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\.\.\Resources\serial\CUart.h(7): error:  #5: cannot open source input file ".\classes\CBuffer.h": No such file or directory
+compiling pccomm.cpp...
+Source\main.h(5): error:  #5: cannot open source input file ".\mbed Library\mbed.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+.\Source\.\Resources\serial\CBuffer.h(5): error:  #5: cannot open source input file ".\mbed library\mbed.h": No such file or directory
+compiling pccomm.cpp...
+Source\main.h(5): error:  #5: cannot open source input file ".\mbed Library\mbed.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\main.h(5): error:  #5: cannot open source input file ".\mbed Library\mbed.h": No such file or directory
+compiling pccomm.cpp...
+Source\main.h(5): error:  #5: cannot open source input file ".\mbed Library\mbed.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\main.cpp(49): error:  #20: identifier "CGps" is undefined
+Source\main.cpp(49): error:  #18: expected a ")"
+Source\main.cpp(54): error:  #20: identifier "CServo" is undefined
+Source\main.cpp(55): error:  #20: identifier "CServo" is undefined
+Source\main.cpp(59): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(59): error:  #18: expected a ")"
+Source\main.cpp(61): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(61): error:  #18: expected a ")"
+Source\main.cpp(63): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(63): error:  #18: expected a ")"
+Source\main.cpp(65): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(65): error:  #18: expected a ")"
+Source\main.cpp(69): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(71): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(73): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(76): error:  #20: identifier "CSpeed" is undefined
+Source\main.cpp(79): error:  #20: identifier "CDigitalCompass" is undefined
+Source\main.cpp(79): error:  #18: expected a ")"
+Source\main.cpp(105): error:  #276: name followed by "::" must be a class or namespace name
+Source\main.cpp(105): error:  #304: no instance of overloaded function "mbed::Ticker::attach" matches the argument list
+compiling pccomm.cpp...
+Source\pccomm.cpp(22): error:  #20: identifier "CSonar" is undefined
+Source\pccomm.cpp(23): error:  #20: identifier "CSpeed" is undefined
+Source\pccomm.cpp(24): error:  #20: identifier "CServo" is undefined
+Source\pccomm.cpp(25): error:  #20: identifier "C2y0a700" is undefined
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\main.h(7): error:  #5: cannot open source input file ".\classes\servo\CServo.h": No such file or directory
+compiling pccomm.cpp...
+Source\main.h(7): error:  #5: cannot open source input file ".\classes\servo\CServo.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\.\Resources\servo\CServo.h(5): error:  #5: cannot open source input file ".\mbed library\mbed.h": No such file or directory
+compiling pccomm.cpp...
+Source\.\Resources\servo\CServo.h(5): error:  #5: cannot open source input file ".\mbed library\mbed.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\.\Resources\servo\CServo.h(6): error:  #5: cannot open source input file ".\Resources\CConvert.h": No such file or directory
+compiling pccomm.cpp...
+Source\.\Resources\servo\CServo.h(6): error:  #5: cannot open source input file ".\Resources\CConvert.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\.\Resources\servo\CServo.h(6): error:  #5: cannot open source input file ".\Resources\CConvert.h": No such file or directory
+compiling pccomm.cpp...
+Source\.\Resources\servo\CServo.h(6): error:  #5: cannot open source input file ".\Resources\CConvert.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\.\Resources\servo\CServo.h(21): error:  #262: not a class or struct name
+Source\main.cpp(49): error:  #20: identifier "CGps" is undefined
+Source\main.cpp(49): error:  #18: expected a ")"
+Source\main.cpp(59): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(59): error:  #18: expected a ")"
+Source\main.cpp(61): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(61): error:  #18: expected a ")"
+Source\main.cpp(63): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(63): error:  #18: expected a ")"
+Source\main.cpp(65): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(65): error:  #18: expected a ")"
+Source\main.cpp(69): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(71): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(73): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(76): error:  #20: identifier "CSpeed" is undefined
+Source\main.cpp(79): error:  #20: identifier "CDigitalCompass" is undefined
+Source\main.cpp(79): error:  #18: expected a ")"
+Source\main.cpp(105): error:  #276: name followed by "::" must be a class or namespace name
+Source\main.cpp(105): error:  #304: no instance of overloaded function "mbed::Ticker::attach" matches the argument list
+compiling pccomm.cpp...
+Source\.\Resources\servo\CServo.h(21): error:  #262: not a class or struct name
+Source\pccomm.cpp(22): error:  #20: identifier "CSonar" is undefined
+Source\pccomm.cpp(23): error:  #20: identifier "CSpeed" is undefined
+Source\pccomm.cpp(25): error:  #20: identifier "C2y0a700" is undefined
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\.\Resources\servo\CServo.h(21): error:  #262: not a class or struct name
+Source\main.cpp(49): error:  #20: identifier "CGps" is undefined
+Source\main.cpp(49): error:  #18: expected a ")"
+Source\main.cpp(59): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(59): error:  #18: expected a ")"
+Source\main.cpp(61): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(61): error:  #18: expected a ")"
+Source\main.cpp(63): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(63): error:  #18: expected a ")"
+Source\main.cpp(65): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(65): error:  #18: expected a ")"
+Source\main.cpp(69): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(71): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(73): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(76): error:  #20: identifier "CSpeed" is undefined
+Source\main.cpp(79): error:  #20: identifier "CDigitalCompass" is undefined
+Source\main.cpp(79): error:  #18: expected a ")"
+Source\main.cpp(105): error:  #276: name followed by "::" must be a class or namespace name
+Source\main.cpp(105): error:  #304: no instance of overloaded function "mbed::Ticker::attach" matches the argument list
+compiling pccomm.cpp...
+Source\.\Resources\servo\CServo.h(21): error:  #262: not a class or struct name
+Source\pccomm.cpp(22): error:  #20: identifier "CSonar" is undefined
+Source\pccomm.cpp(23): error:  #20: identifier "CSpeed" is undefined
+Source\pccomm.cpp(25): error:  #20: identifier "C2y0a700" is undefined
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\main.cpp(49): error:  #20: identifier "CGps" is undefined
+Source\main.cpp(49): error:  #18: expected a ")"
+Source\main.cpp(59): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(59): error:  #18: expected a ")"
+Source\main.cpp(61): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(61): error:  #18: expected a ")"
+Source\main.cpp(63): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(63): error:  #18: expected a ")"
+Source\main.cpp(65): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(65): error:  #18: expected a ")"
+Source\main.cpp(69): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(71): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(73): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(76): error:  #20: identifier "CSpeed" is undefined
+Source\main.cpp(79): error:  #20: identifier "CDigitalCompass" is undefined
+Source\main.cpp(79): error:  #18: expected a ")"
+Source\main.cpp(105): error:  #276: name followed by "::" must be a class or namespace name
+Source\main.cpp(105): error:  #304: no instance of overloaded function "mbed::Ticker::attach" matches the argument list
+compiling pccomm.cpp...
+Source\pccomm.cpp(22): error:  #20: identifier "CSonar" is undefined
+Source\pccomm.cpp(23): error:  #20: identifier "CSpeed" is undefined
+Source\pccomm.cpp(25): error:  #20: identifier "C2y0a700" is undefined
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\main.cpp(49): error:  #20: identifier "CGps" is undefined
+Source\main.cpp(49): error:  #18: expected a ")"
+Source\main.cpp(59): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(59): error:  #18: expected a ")"
+Source\main.cpp(61): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(61): error:  #18: expected a ")"
+Source\main.cpp(63): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(63): error:  #18: expected a ")"
+Source\main.cpp(65): error:  #20: identifier "CSonar" is undefined
+Source\main.cpp(65): error:  #18: expected a ")"
+Source\main.cpp(69): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(71): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(73): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(76): error:  #20: identifier "CSpeed" is undefined
+Source\main.cpp(79): error:  #20: identifier "CDigitalCompass" is undefined
+Source\main.cpp(79): error:  #18: expected a ")"
+Source\main.cpp(105): error:  #276: name followed by "::" must be a class or namespace name
+Source\main.cpp(105): error:  #304: no instance of overloaded function "mbed::Ticker::attach" matches the argument list
+compiling pccomm.cpp...
+Source\pccomm.cpp(22): error:  #20: identifier "CSonar" is undefined
+Source\pccomm.cpp(23): error:  #20: identifier "CSpeed" is undefined
+Source\pccomm.cpp(25): error:  #20: identifier "C2y0a700" is undefined
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\main.h(8): error:  #5: cannot open source input file ".\classes\sonar\CSrf05.h": No such file or directory
+compiling pccomm.cpp...
+Source\main.h(8): error:  #5: cannot open source input file ".\classes\sonar\CSrf05.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\.\Resources\sonar\CSrf05.h(5): error:  #5: cannot open source input file ".\mbed library\mbed.h": No such file or directory
+compiling pccomm.cpp...
+Source\.\Resources\sonar\CSrf05.h(5): error:  #5: cannot open source input file ".\mbed library\mbed.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\main.cpp(49): error:  #20: identifier "CGps" is undefined
+Source\main.cpp(49): error:  #18: expected a ")"
+Source\main.cpp(69): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(71): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(73): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(76): error:  #20: identifier "CSpeed" is undefined
+Source\main.cpp(79): error:  #20: identifier "CDigitalCompass" is undefined
+Source\main.cpp(79): error:  #18: expected a ")"
+Source\main.cpp(105): error:  #276: name followed by "::" must be a class or namespace name
+Source\main.cpp(105): error:  #304: no instance of overloaded function "mbed::Ticker::attach" matches the argument list
+compiling pccomm.cpp...
+Source\pccomm.cpp(23): error:  #20: identifier "CSpeed" is undefined
+Source\pccomm.cpp(25): error:  #20: identifier "C2y0a700" is undefined
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\.\Resources\motor control\CSpeed.h(5): error:  #5: cannot open source input file ".\mbed library\mbed.h": No such file or directory
+compiling pccomm.cpp...
+Source\.\Resources\motor control\CSpeed.h(5): error:  #5: cannot open source input file ".\mbed library\mbed.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\main.cpp(49): error:  #20: identifier "CGps" is undefined
+Source\main.cpp(49): error:  #18: expected a ")"
+Source\main.cpp(69): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(71): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(73): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(79): error:  #20: identifier "CDigitalCompass" is undefined
+Source\main.cpp(79): error:  #18: expected a ")"
+Source\main.cpp(105): error:  #276: name followed by "::" must be a class or namespace name
+Source\main.cpp(105): error:  #304: no instance of overloaded function "mbed::Ticker::attach" matches the argument list
+compiling pccomm.cpp...
+Source\pccomm.cpp(25): error:  #20: identifier "C2y0a700" is undefined
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\main.cpp(49): error:  #20: identifier "CGps" is undefined
+Source\main.cpp(49): error:  #18: expected a ")"
+Source\main.cpp(69): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(71): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(73): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(79): error:  #20: identifier "CDigitalCompass" is undefined
+Source\main.cpp(79): error:  #18: expected a ")"
+Source\main.cpp(105): error:  #276: name followed by "::" must be a class or namespace name
+Source\main.cpp(105): error:  #304: no instance of overloaded function "mbed::Ticker::attach" matches the argument list
+compiling pccomm.cpp...
+Source\pccomm.cpp(25): error:  #20: identifier "C2y0a700" is undefined
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\main.cpp(49): error:  #20: identifier "CGps" is undefined
+Source\main.cpp(49): error:  #18: expected a ")"
+Source\main.cpp(69): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(71): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(73): error:  #20: identifier "C2y0a700" is undefined
+Source\main.cpp(79): error:  #20: identifier "CDigitalCompass" is undefined
+Source\main.cpp(79): error:  #18: expected a ")"
+Source\main.cpp(105): error:  #276: name followed by "::" must be a class or namespace name
+Source\main.cpp(105): error:  #304: no instance of overloaded function "mbed::Ticker::attach" matches the argument list
+compiling pccomm.cpp...
+Source\pccomm.cpp(25): error:  #20: identifier "C2y0a700" is undefined
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\.\Resources\ir distance\C2y0a700.h(5): error:  #5: cannot open source input file ".\classes\CConvert.h": No such file or directory
+compiling pccomm.cpp...
+Source\.\Resources\ir distance\C2y0a700.h(5): error:  #5: cannot open source input file ".\classes\CConvert.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\main.cpp(49): error:  #20: identifier "CGps" is undefined
+Source\main.cpp(49): error:  #18: expected a ")"
+Source\main.cpp(79): error:  #20: identifier "CDigitalCompass" is undefined
+Source\main.cpp(79): error:  #18: expected a ")"
+Source\main.cpp(105): error:  #276: name followed by "::" must be a class or namespace name
+Source\main.cpp(105): error:  #304: no instance of overloaded function "mbed::Ticker::attach" matches the argument list
+compiling pccomm.cpp...
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\main.cpp(49): error:  #20: identifier "CGps" is undefined
+Source\main.cpp(49): error:  #18: expected a ")"
+Source\main.cpp(79): error:  #20: identifier "CDigitalCompass" is undefined
+Source\main.cpp(79): error:  #18: expected a ")"
+Source\main.cpp(105): error:  #276: name followed by "::" must be a class or namespace name
+Source\main.cpp(105): error:  #304: no instance of overloaded function "mbed::Ticker::attach" matches the argument list
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\.\Resources\gps\CGps.h(5): error:  #5: cannot open source input file ".\classes\gps\cnmea.h": No such file or directory
+compiling pccomm.cpp...
+Source\.\Resources\gps\CGps.h(5): error:  #5: cannot open source input file ".\classes\gps\cnmea.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+.\Source\.\Resources\gps\cnmea.h(4): error:  #5: cannot open source input file ".\mbed library\mbed.h": No such file or directory
+compiling pccomm.cpp...
+.\Source\.\Resources\gps\cnmea.h(4): error:  #5: cannot open source input file ".\mbed library\mbed.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\.\Resources\gps\CGps.h(6): error:  #5: cannot open source input file ".\Resourcesclasses\serial\CUart.h": No such file or directory
+compiling pccomm.cpp...
+Source\.\Resources\gps\CGps.h(6): error:  #5: cannot open source input file ".\Resourcesclasses\serial\CUart.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\main.cpp(79): error:  #20: identifier "CDigitalCompass" is undefined
+Source\main.cpp(79): error:  #18: expected a ")"
+compiling pccomm.cpp...
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+Source\.\Resources\compass\cdcompass.h(4): error:  #5: cannot open source input file ".\mbed library\mbed.h": No such file or directory
+compiling pccomm.cpp...
+Source\.\Resources\compass\cdcompass.h(4): error:  #5: cannot open source input file ".\mbed library\mbed.h": No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+compiling pccomm.cpp...
+linking...
+.\Output\GPSbot.axf: error: L6002U: Could not open file .\mbed Library\lib26\LPC1768\cmsis_nvic.o: No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+compiling pccomm.cpp...
+linking...
+.\Output\GPSbot.axf: error: L6002U: Could not open file .\Source\mbed Library\lib26\LPC1768\capi.ar: No such file or directory
+Target not created
+Build target 'GPSbot'
+linking...
+.\Output\GPSbot.axf: error: L6031U: Could not open scatter description file .\mbed Library\lib26\LPC1768\LPC1768.sct: No such file or directory
+Target not created
+Build target 'GPSbot'
+compiling main.cpp...
+compiling pccomm.cpp...
+linking...
+.\Output\GPSbot.axf: error: L6031U: Could not open scatter description file .\mbedLibrary\lib26\LPC1768\LPC1768.sct: No such file or directory
+Target not created
+Build target 'GPSbot'
+linking...
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CDigitalCompass::Read() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CDigitalCompass::Config() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CDigitalCompass::CDigitalCompass(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CGps::BuildPacket() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CGps::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CGps::CGps(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CServo::CServo(PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CSonar::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CSonar::CSonar(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CSpeed::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CSpeed::CSpeed(PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::Baud(unsigned) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::CUart0(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart1::Baud(unsigned) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart1::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart1::CUart1(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Baud(unsigned) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Write(char*) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::CUart2(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::Disable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::C2y0a700(PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::Write(char*) (referred from pccomm.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::IsReadable() (referred from pccomm.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Read() (referred from pccomm.o).
+Target not created
+Build target 'GPSbot'
+compiling cdcompass.cpp...
+linking...
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CGps::BuildPacket() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CGps::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CGps::CGps(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CServo::CServo(PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CSonar::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CSonar::CSonar(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CSpeed::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CSpeed::CSpeed(PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::Baud(unsigned) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::CUart0(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart1::Baud(unsigned) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart1::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart1::CUart1(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Baud(unsigned) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Write(char*) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::CUart2(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::Disable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::C2y0a700(PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::Write(char*) (referred from pccomm.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::IsReadable() (referred from pccomm.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Read() (referred from pccomm.o).
+Target not created
+Build target 'GPSbot'
+compiling CGps.cpp...
+compiling CNmea.cpp...
+linking...
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CServo::CServo(PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CSonar::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CSonar::CSonar(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CSpeed::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CSpeed::CSpeed(PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::Baud(unsigned) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::CUart0(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart1::Baud(unsigned) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart1::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart1::CUart1(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Baud(unsigned) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Write(char*) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::CUart2(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::Disable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::C2y0a700(PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::Write(char*) (referred from pccomm.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::IsReadable() (referred from pccomm.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Read() (referred from pccomm.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::IsReadable() (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Baud(unsigned) (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Read() (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Write(char*) (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Write(unsigned char) (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Enable() (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Disable() (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::CUart3(PinName, PinName) (referred from cgps.o).
+Target not created
+Build target 'GPSbot'
+compiling CServo.cpp...
+linking...
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CSonar::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CSonar::CSonar(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CSpeed::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CSpeed::CSpeed(PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::Baud(unsigned) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::CUart0(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart1::Baud(unsigned) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart1::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart1::CUart1(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Baud(unsigned) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Write(char*) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::CUart2(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::Disable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::C2y0a700(PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::Write(char*) (referred from pccomm.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::IsReadable() (referred from pccomm.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Read() (referred from pccomm.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::IsReadable() (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Baud(unsigned) (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Read() (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Write(char*) (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Write(unsigned char) (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Enable() (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Disable() (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::CUart3(PinName, PinName) (referred from cgps.o).
+Target not created
+Build target 'GPSbot'
+compiling CSrf05.cpp...
+linking...
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CSpeed::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CSpeed::CSpeed(PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::Baud(unsigned) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::CUart0(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart1::Baud(unsigned) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart1::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart1::CUart1(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Baud(unsigned) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Write(char*) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::CUart2(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::Disable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::C2y0a700(PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::Write(char*) (referred from pccomm.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::IsReadable() (referred from pccomm.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Read() (referred from pccomm.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::IsReadable() (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Baud(unsigned) (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Read() (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Write(char*) (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Write(unsigned char) (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Enable() (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Disable() (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::CUart3(PinName, PinName) (referred from cgps.o).
+Target not created
+Build target 'GPSbot'
+compiling CSpeed.cpp...
+linking...
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::Baud(unsigned) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::CUart0(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart1::Baud(unsigned) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart1::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart1::CUart1(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Baud(unsigned) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Write(char*) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::CUart2(PinName, PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::Disable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::C2y0a700(PinName) (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart0::Write(char*) (referred from pccomm.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::IsReadable() (referred from pccomm.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart2::Read() (referred from pccomm.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::IsReadable() (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Baud(unsigned) (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Read() (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Write(char*) (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Write(unsigned char) (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Enable() (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::Disable() (referred from cgps.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol CUart3::CUart3(PinName, PinName) (referred from cgps.o).
+Target not created
+Build target 'GPSbot'
+compiling CBuffer.cpp...
+compiling CUart0.cpp...
+compiling CUart1.cpp...
+compiling CUart2.cpp...
+compiling CUart3.cpp...
+linking...
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::Enable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::Disable() (referred from main.o).
+.\Output\GPSbot.axf: Error: L6218E: Undefined symbol C2y0a700::C2y0a700(PinName) (referred from main.o).
+Target not created
+Build target 'GPSbot'
+compiling C2y0a700.cpp...
+linking...
+Program Size: Code=36352 RO-data=2464 RW-data=336 ZI-data=5348  
+User command #1: fromelf --bin --output=E:/GPSbot.bin ./Output/GPSbot.axf
+Error: Q0108E: Could not create output file 'E:/GPSbot.bin': No such file or directory
+Finished: 0 information, 0 warning and 1 error messages.
+".\Output\GPSbot.axf" - 0 Error(s), 0 Warning(s).
