@@ -346,7 +346,7 @@
               <MiscControls></MiscControls>
               <Define>TARGET_LPC1768</Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>..\GPSbot;.\Source</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -373,7 +373,7 @@
             <useFile>0</useFile>
             <TextAddressRange>0x00000000</TextAddressRange>
             <DataAddressRange>0x10000000</DataAddressRange>
-            <ScatterFile>.\mbed Library\lib26\LPC1768\LPC1768.sct</ScatterFile>
+            <ScatterFile>.\Source\mbedLibrary\lib26\LPC1768\LPC1768.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -404,27 +404,27 @@
             <File>
               <FileName>cmsis_nvic.o</FileName>
               <FileType>3</FileType>
-              <FilePath>.\mbed Library\lib26\LPC1768\cmsis_nvic.o</FilePath>
+              <FilePath>C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbedLibrary\lib26\LPC1768\cmsis_nvic.o</FilePath>
             </File>
             <File>
               <FileName>core_cm3.o</FileName>
               <FileType>3</FileType>
-              <FilePath>.\mbed Library\lib26\LPC1768\core_cm3.o</FilePath>
+              <FilePath>C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbedLibrary\lib26\LPC1768\core_cm3.o</FilePath>
             </File>
             <File>
               <FileName>stackheap.o</FileName>
               <FileType>3</FileType>
-              <FilePath>.\mbed Library\lib26\LPC1768\stackheap.o</FilePath>
+              <FilePath>C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbedLibrary\lib26\LPC1768\stackheap.o</FilePath>
             </File>
             <File>
               <FileName>startup_LPC17xx.o</FileName>
               <FileType>3</FileType>
-              <FilePath>.\mbed Library\lib26\LPC1768\startup_LPC17xx.o</FilePath>
+              <FilePath>C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbedLibrary\lib26\LPC1768\startup_LPC17xx.o</FilePath>
             </File>
             <File>
               <FileName>system_LPC17xx.o</FileName>
               <FileType>3</FileType>
-              <FilePath>.\mbed Library\lib26\LPC1768\system_LPC17xx.o</FilePath>
+              <FilePath>C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbedLibrary\lib26\LPC1768\system_LPC17xx.o</FilePath>
             </File>
           </Files>
         </Group>
@@ -434,12 +434,77 @@
             <File>
               <FileName>capi.ar</FileName>
               <FileType>4</FileType>
-              <FilePath>C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbed Library\lib26\LPC1768\capi.ar</FilePath>
+              <FilePath>C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbedLibrary\lib26\LPC1768\capi.ar</FilePath>
             </File>
             <File>
               <FileName>mbed.ar</FileName>
               <FileType>4</FileType>
-              <FilePath>C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbed Library\lib26\LPC1768\mbed.ar</FilePath>
+              <FilePath>C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\mbedLibrary\lib26\LPC1768\mbed.ar</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Drivers</GroupName>
+          <Files>
+            <File>
+              <FileName>cdcompass.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Source\Resources\compass\cdcompass.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>CGps.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Source\Resources\gps\CGps.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>CNmea.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Source\Resources\gps\CNmea.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>CServo.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Source\Resources\servo\CServo.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>CSrf05.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Source\Resources\sonar\CSrf05.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>CSpeed.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Source\Resources\motor control\CSpeed.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>CBuffer.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Source\Resources\serial\CBuffer.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>CUart0.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Source\Resources\serial\CUart0.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>CUart1.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Source\Resources\serial\CUart1.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>CUart2.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Source\Resources\serial\CUart2.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>CUart3.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Source\Resources\serial\CUart3.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>C2y0a700.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Source\Resources\ir distance\C2y0a700.cpp</FilePath>
             </File>
           </Files>
         </Group>

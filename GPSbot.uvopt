@@ -503,7 +503,7 @@
   </Group>
 
   <AlienFiles>
-    <PathWithFilename>C:\Embedded Design\Arm Projects\Cortex M3\Projects\tempGPSbot\Source\main.h</PathWithFilename>
+    <PathWithFilename>C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\main.h</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>12</CurrentLine>
     <Constant>0</Constant>

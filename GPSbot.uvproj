@@ -346,7 +346,7 @@
               <MiscControls></MiscControls>
               <Define>TARGET_LPC1768</Define>
               <Undefine></Undefine>
-              <IncludePath>..\GPSbot;.\Source</IncludePath>
+              <IncludePath>..\GPSbot;.\Source;.\mbedLibrary\lib26\LPC1768</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
