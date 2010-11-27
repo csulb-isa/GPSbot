@@ -326,22 +326,22 @@
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>10</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Source\Resources\compass\cdcompass.cpp</PathWithFileName>
       <FilenameWithoutPath>cdcompass.cpp</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>11</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -354,8 +354,8 @@
       <FilenameWithoutPath>CGps.cpp</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>12</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -368,8 +368,8 @@
       <FilenameWithoutPath>CNmea.cpp</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>13</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -382,8 +382,8 @@
       <FilenameWithoutPath>CServo.cpp</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>14</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -396,8 +396,8 @@
       <FilenameWithoutPath>CSrf05.cpp</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>15</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -410,8 +410,8 @@
       <FilenameWithoutPath>CSpeed.cpp</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>16</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -424,8 +424,8 @@
       <FilenameWithoutPath>CBuffer.cpp</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>17</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -438,8 +438,8 @@
       <FilenameWithoutPath>CUart0.cpp</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>18</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -452,8 +452,8 @@
       <FilenameWithoutPath>CUart1.cpp</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>19</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -466,8 +466,8 @@
       <FilenameWithoutPath>CUart2.cpp</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>20</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -480,8 +480,8 @@
       <FilenameWithoutPath>CUart3.cpp</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>21</FileNumber>
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -503,7 +503,7 @@
   </Group>
 
   <AlienFiles>
-    <PathWithFilename>C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\main.h</PathWithFilename>
+    <PathWithFilename>C:\Embedded Design\Arm Projects\Cortex M3\Projects\tempGPSbot\Source\main.h</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>12</CurrentLine>
     <Constant>0</Constant>
