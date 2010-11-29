@@ -23,19 +23,16 @@ void CDigitalCompass::Config()
 	_compass.start();
 	// pass on the device address and a write command
 	// this is the starting address
-	//_compass.write(HMC5843_CONFIG_A);
 	_compass.write(0x3c);
 	// Here is the data - 1 byte per address, auto incrementing
-	//_compass.write(OUTPUT_1_HZ|BIAS_NEG);
 	_compass.write(0x02);
-	//_compass.write(GAIN_0_7);
-	//_compass.write(MODE_CONT);
 	_compass.write(0x00);
 	_compass.stop();
 }
 
 void CDigitalCompass::CalculateHeading()
 {
+	// having troubles here - defective sensor??
 	//rslt = atan2((float)10, (float)-10);
 	rslt = atan2((float)data_y, (float)data_x);
 	rslt = abs((rslt*(180/PI)));
@@ -45,27 +42,27 @@ void CDigitalCompass::CalculateHeading()
 	//}
 }
 
-int16_t CDigitalCompass::GetHeading()
+int32_t CDigitalCompass::GetHeading()
 {
  	CalculateHeading();
 	return rslt;
 }
 
-int16_t CDigitalCompass::GetX()
+int32_t CDigitalCompass::GetX()
 {
  	return data_x;
 }
 
-int16_t CDigitalCompass::GetY()
+int32_t CDigitalCompass::GetY()
 {
  	return data_y;
 }
-int16_t CDigitalCompass::GetZ()
+int32_t CDigitalCompass::GetZ()
 {
  	return data_z;
 }
 
-uint8_t CDigitalCompass::GetStatus()
+uint32_t CDigitalCompass::GetStatus()
 {
  	return status;
 }
@@ -73,7 +70,6 @@ uint8_t CDigitalCompass::GetStatus()
 void CDigitalCompass::Read()
 {
 	_compass.start();
-	//_compass.write(HMC5843_READ);
 	_compass.write(0x3d);
 	// get X data and store
 	data_x = _compass.read(1);
@@ -91,5 +87,4 @@ void CDigitalCompass::Read()
 	status = _compass.read(0);
 	// initate a stop condition
 	_compass.stop();
-	//}
 }

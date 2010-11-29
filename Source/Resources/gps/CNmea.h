@@ -1,6 +1,7 @@
 #ifndef CNMEA_H
 #define CNMEA_H
 
+// peripheral library access
 #include ".\mbedLibrary\mbed.h"
 
 #ifndef TRUE

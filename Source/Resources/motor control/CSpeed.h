@@ -1,7 +1,7 @@
 #ifndef CSPEED_H
 #define CSPEED_H
 
-// give CSpeed access to convert functions
+// peripheral library access
 #include ".\mbedLibrary\mbed.h"
 
 #ifndef TRUE
@@ -23,7 +23,6 @@ private:
 	// memeber of the Class by inheritance
 	InterruptIn _speed;
 	Timer _period;
-	Timeout _calc;
 	DigitalOut _indiacte;
 
 	// variables
@@ -49,7 +48,7 @@ public:
 	void Disable(void);
 	
 	// user access to the pertinent & formatted data
-	uint8_t GetMph(void);
+	uint32_t GetMph(void);
 	uint32_t GetFph(void);
 	uint32_t GetMps(void);
 	uint32_t GetFps(void);	

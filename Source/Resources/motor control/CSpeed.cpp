@@ -69,8 +69,7 @@ void CSpeed::calculatemph(float input)
 {	
 	// 1879 ms = 1mph in our use.  Do not calculate speeds
 	// lower than 1 mph (not floating point result)
-	if ((input > MS_MPH) || (input < 1))
-	{
+	if ((input > MS_MPH) || (input < 1)){
 		mph = 0;
 		return;
 	}
@@ -86,13 +85,13 @@ void CSpeed::calculatemph(float input)
 	mph = mph*MS_PER_SECOND;
 }
 
-uint8_t CSpeed::GetMph()
+uint32_t CSpeed::GetMph()
 {
 	// use the value it last was incase of an interrupt
 	// during this calculation
 	float tempperiodms = periodms;
 	// make the calculation only when called
-	CSpeed::calculatemph(tempperiodms);
+	calculatemph(tempperiodms);
 	return mph;
 }
 
@@ -100,8 +99,7 @@ void CSpeed::calculatefph(float input)
 {
 	// 1879 ms = 1mph in our use.  Do not calculate speeds
 	// lower than 1 mph (not floating point result)
-	if (input > MS_MPH)
-	{
+	if (input > MS_MPH){
 		fph = 0;
 		return;
 	}
@@ -120,7 +118,7 @@ uint32_t CSpeed::GetFph()
 	// during this calculation
 	float tempperiodms = periodms;
 	// make the calculation only when called
-	CSpeed::calculatefph(tempperiodms);
+	calculatefph(tempperiodms);
 	return fph;
 }
 
@@ -128,8 +126,7 @@ void CSpeed::calculatemps(float input)
 {	
 	// 1879 ms = 1mph in our use.  Do not calculate speeds
 	// lower than 1 mph (not floating point result)
-	if (input > MS_MPH)
-	{
+	if (input > MS_MPH){
 		mps = 0;
 		return;
 	}
@@ -149,7 +146,7 @@ uint32_t CSpeed::GetMps()
 	// during this calculation
 	float tempperiodms = periodms;
 	// make the calculation only when called
-	CSpeed::calculatemps(tempperiodms);
+	calculatemps(tempperiodms);
 	return mps;
 }
 
@@ -157,8 +154,7 @@ void CSpeed::calculatefps(float input)
 {
 	// 1879 ms = 1mph in our use.  Do not calculate speeds
 	// lower than 1 mph (not floating point result)
-	if (input > MS_MPH)
-	{
+	if (input > MS_MPH){
 		fps = 0;
 		return;
 	}
@@ -175,7 +171,7 @@ uint32_t CSpeed::GetFps()
 	// during this calculation
 	float tempperiodms = periodms;
 	// make the calculation only when called
-	CSpeed::calculatefps(tempperiodms);
+	calculatefps(tempperiodms);
 	return fps;
 }
 

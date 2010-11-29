@@ -1,6 +1,7 @@
 #ifndef CDCOMPASS_H
 #define CDCOMPASS_H
 
+// give access to peripheral library
 #include ".\mbedLibrary\mbed.h"
 
 #define PI	(double)3.1415926535897932384626433832795
@@ -25,16 +26,16 @@
 #define HMC5843_ID_C		0x0c
 
 // Configurations
-#define BIAS_NORM 			(0x0<<0)
-#define BIAS_POS			(0x1<<0)
-#define BIAS_NEG			(0x2<<0)
+#define BIAS_NORM 		(0x0<<0)
+#define BIAS_POS		(0x1<<0)
+#define BIAS_NEG		(0x2<<0)
 
-#define OUTPUT_1_HZ			(0x1<<2)
-#define OUTPUT_2_HZ			(0x2<<2)
-#define OUTPUT_5_HZ			(0x3<<2)
-#define OUTPUT_10_HZ		(0x4<<2)
-#define OUTPUT_20_HZ		(0x5<<2)
-#define OUTPUT_50_HZ		(0x6<<2)
+#define OUTPUT_1_HZ		(0x1<<2)
+#define OUTPUT_2_HZ		(0x2<<2)
+#define OUTPUT_5_HZ		(0x3<<2)
+#define OUTPUT_10_HZ	(0x4<<2)
+#define OUTPUT_20_HZ	(0x5<<2)
+#define OUTPUT_50_HZ	(0x6<<2)
 
 #define GAIN_0_7		(0x0<<5)
 #define GAIN_1_0		(0x1<<5)
@@ -54,29 +55,36 @@
 #define STATUS_LOCK		(0x1<<1)
 #define STATUS_REN		(0x1<<2)
 
-uint8_t TestCompass(uint8_t);
-
 class CDigitalCompass
 {
 private:
+	// peripheral members
 	I2C _compass;
-
+	// variable members
 	float rslt;
-	int16_t data_x, data_y, data_z;
-	uint8_t status;
+	int32_t data_x, data_y, data_z;
+	uint32_t status;
+	// method members
+	void CalculateHeading();
 
 public:
+	// constructor
 	CDigitalCompass(PinName, PinName);
+	// called to setup the module
 	void Config();
+	// should  be called at an interval based on the config setting for 
+	// the refresh rate
 	void Read();
-	int16_t GetHeading();
-	int16_t GetX();
-	int16_t GetY();
-	int16_t GetZ();
-	uint8_t GetStatus();
-	void Enable();
-	void Disable();
-	void CalculateHeading();
+	// access to the calculated heading
+	int32_t GetHeading();
+	// access to the X reading
+	int32_t GetX();
+	// access to the Y reading
+	int32_t GetY();
+	// access to the Z reading
+	int32_t GetZ();
+	// access to the device status
+	uint32_t GetStatus();
 };
 
 
