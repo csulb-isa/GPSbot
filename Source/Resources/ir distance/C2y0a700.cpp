@@ -33,8 +33,8 @@ C2y0a700::C2y0a700(PinName pin)	: _distance(pin)
 
 void C2y0a700::Enable()
 {
-	// attach the interrupt handler (valid sample every 20ms - read and average)
-	_elapse.attach(this, &C2y0a700::interrupt, .001); 
+	// attach the interrupt handler (valid sample every 2ms - read and average at 20ms)
+	_elapse.attach(this, &C2y0a700::interrupt, .002); 
 }
 
 void C2y0a700::Disable()
@@ -43,7 +43,7 @@ void C2y0a700::Disable()
 	_elapse.detach();
 }
 
-uint16_t C2y0a700::GetAverage()
+uint32_t C2y0a700::GetAverage()
 {
 	// pass the computed average to the main program
 	return result.average;
@@ -55,31 +55,23 @@ void C2y0a700::computeaverage()
 	for(uint8_t cnt = 0; cnt < SAMPLE_CNT; cnt++)
 	 	temp += result.data[cnt];
 
-	// finish the calculation
-	if (temp > SAMPLE_CNT)
-		result.average = temp/SAMPLE_CNT;
-	// dont divide by 0
-	else
+	// ensure we dont divide by 0 and crash the program
+	if (temp == 0)
 		result.average = 0;
+	else
+		result.average = temp/SAMPLE_CNT;
 }
 
-uint8_t C2y0a700::GetDistance()
+uint32_t C2y0a700::GetDistance()
 {
  	// go and calculate the distance in ft.
-	setdist();			/* convert the a/d result to feet */
+	calculatedistance();			/* convert the a/d result to feet */
 	// pass the formatted result to the user
-	return IR_DISTANCE[dist];
+	return (uint32_t)IR_DISTANCE[dist];
 }
 
-float C2y0a700::GetVoltage()
-{
- 	// return the voltage that is measured as it 
-	// is measured
-	return result.average*A_D_RESOLUTION;
-}
-
-// need to work on these calculations
-void C2y0a700::setdist()
+// need to work on these calculations from data sheet
+void C2y0a700::calculatedistance()
 {
 //	if (result.average < )
 //
@@ -89,14 +81,24 @@ void C2y0a700::setdist()
 //
 }
 
+float C2y0a700::GetVoltage()
+{
+ 	// return the voltage that is measured as it 
+	return (result.data[result.wptr]*A_D_RESOLUTION);
+}
+
+float C2y0a700::GetAveraveVolatage()
+{
+ 	return (result.average*A_D_RESOLUTION); 
+}
+
 void C2y0a700::interrupt()
 {
 	// load the sample into the averaging buffer and increment for next read
 	result.data[result.wptr++] = _distance.read_u16();
 	
 	// 0-(n-1)  is equal to n size, reset the buffer locator for the next sample 
-	if (result.wptr == (SAMPLE_CNT-1))
-	{
+	if (result.wptr == (SAMPLE_CNT-1)){
 		result.wptr = 0;
 		computeaverage();
 	}
