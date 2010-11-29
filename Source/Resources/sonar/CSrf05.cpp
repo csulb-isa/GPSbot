@@ -17,7 +17,7 @@
  *									 time(uS)/58 = distance (centimeters)
  *
  *		EXAMPLE OF USE:
- *			CSonar(PinName) Sensor_Left;	// build from the only constructor
+ *			CSonar Sensor_Left(PinName);	// build from the only constructor
  *			Sensor_Left.Enable();			// start the module and get readings
  *			uint8_t FT = Sensor_Left.GetDistance();		// return the result
  *			Sensor_Left.Disable();			// preserve uC power when not in use
@@ -39,6 +39,8 @@ CSonar::CSonar(PinName pinin, PinName pinout)	:	_echo(pinin), _trigger(pinout)
 
 void CSonar::Enable()
 {
+	// re-initialize measurement variables
+	periodms = periodus = 1;
 	// attach a timed interrupt that will poll the sensor status and generate 
 	// pings when necessary (~40mS)
 	// ultrasonic wavelength must be dead before restarting
@@ -66,14 +68,12 @@ void CSonar::fallinterrupt()
 	// store the distance calculation until called upon
 	periodms = _risetime.read_ms();
 	periodus = _risetime.read_us();
-	// This works but seems like overkill, just calculate when the value
-	// is needed by the main program
-	//calculatedistance();	/* find out where the object is */
 }
 
 void CSonar::elapseinterrupt()
 {
-	// make sure the last ultrasonic burst has disipated 
+	// make sure the last ultrasonic burst has elapsed
+	// ISR is 400uS
 	if (elapsecnt >= 100)
 	{
 	 	// 400uS entrance * 101 ~=40mS sensor refresh rate
@@ -91,53 +91,38 @@ void CSonar::elapseinterrupt()
 	elapsecnt++;
 }
 
-void CSonar::calculatedistance(float input)
+uint32_t CSonar::GetPulsePeriodMs()
 {
- 	// distance is ~2mS for each foot of object distance
-	distance = .5 * input;
+ 	// Return the last known period measuremnent
+	// from the sensor 
+	return (periodms);
 }
 
-uint8_t CSonar::GetDistance()
+uint32_t CSonar::GetPulsePeriodUs()
 {
- 	// give the user the last know complete sensor read
-	//float tempperiodms = periodms;
-	// go and calculate the distance based on the period
-	//calculatedistance(tempperiodms);
-	// return the distance
-	//return distance;
+ 	// Return the last known period measuremnent
+	// from the sensor	 
+	return (periodus);
+}
 
+uint32_t CSonar::GetDistanceFt()
+{
+ 	// use the period to calculate the object distance
+	// cosntant from datasheet
 	return (periodms/2);
 }
 
-uint8_t CSonar::GetDistanceIn()
+uint32_t CSonar::GetDistanceIn()
 {
  	// use the period to calculate the object distance
 	// cosntant from datasheet
 	return (periodus/148);
 }
 
-uint16_t CSonar::GetDistanceCm()
+uint32_t CSonar::GetDistanceCm()
 {
  	// use the period to calculate the object distance
 	// constant from datasheet
 	return (periodus/58);
 }
 
-
-// can be used but there is a better way...
-//void CSonar::calculatedistance()
-//{
-// 	object.duration[object.wptr] = .5 * _risetime.read_ms();	  	/* distance is 2mS for each foot of object distance */
-//	object.wptr++;
-//
-//	if (object.wptr > 1)
-//	{
-//		for (uint8_t cnt = 0; cnt < AMT; cnt++)
-//		{
-//			object.distance += object.duration[cnt];
-//		}
-//		
-//		object.distance = object.distance/AMT;
-//		object.wptr = 0;
-//	}
-//}

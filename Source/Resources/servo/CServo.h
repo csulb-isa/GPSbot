@@ -1,7 +1,7 @@
 #ifndef CSERVO_H
 #define CSERVO_H
 
-// give CServo access to convert functions
+// peripheral library access
 #include ".\mbedLibrary\mbed.h"
 
 #define MAX_STEER_HEADING	180		/* measured by actual controller */
@@ -14,28 +14,30 @@
 #define DEG_RESOLUTION	(.05/100)	/* 100 percent of a result */
 #define PWM_OFFSET		(255+127)	/* resolution of result + center result */
 #define DEG_OFFSET			100
-#define MOTOR_RESOLUTION	255		/* amount of bits in the input */
 #define HEADING_RANGE	(MAX_STEER_HEADING-MIN_STEER_HEADING)
 
 class CServo
 {
 private:
-	PwmOut _pwm;  					/* Derived object for servo control */
+	PwmOut _pwm;  				/* Derived object for servo control */
 
 public:
+	// constructor
+	CServo(PinName);
+
 	// angle methods for controlling 1.0 -> 2.0 mS pulses
-	int8_t GetAngle();       		/* Verified 02-09-10 */
-	void SetAngle(int8_t);   		/* Verified 02-09-10 */
+	// based on range of variable passed.  
+	// 127 = max, -127 = max and 0 = min
+	int8_t GetPos();       		/* Verified 02-09-10 */
+	void SetPos(int8_t);   		/* Verified 02-09-10 */
 
 	// parameter passed in degrees
-	uint8_t GetAngleDeg();			/* Verified 04-20-10 */
-	void SetAngleDeg(float);		/* Needs work */
+	uint8_t GetPosDeg();		/* Verified 04-20-10 */
+	void SetPosDeg(float);		/* Needs work */
 
 	// percentage of time high methods
-	uint8_t GetPulseWidth();			/* Copied from verified steering */
-	void SetPulseWidth(uint8_t);		/* Copied from verified steering */
-
-	CServo(PinName);
+	float GetPulsePercentage();			/* Copied from verified steering */
+	void SetPulsePercentage(float);		/* Copied from verified steering */
 };
 
 #endif

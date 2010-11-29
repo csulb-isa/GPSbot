@@ -46,10 +46,10 @@ enum PinName {
       , p7 = P0_7
       , p8 = P0_6
       , p9 = P0_0
-     , p10 = P0_1
+      , p10 = P0_1
       , p11 = P0_18
       , p12 = P0_17
-     , p13 = P0_15
+      , p13 = P0_15
       , p14 = P0_16
       , p15 = P0_23
       , p16 = P0_24
@@ -76,8 +76,8 @@ enum PinName {
       , USBTX = P0_2
       , USBRX = P0_3
 
-      // Not connected
-    , NC = (int)0xFFFFFFFF
+    // Not connected
+      , NC = (int)0xFFFFFFFF
 
 };
 

@@ -47,8 +47,6 @@ CUart2 Xbee(p28, p27);
 CUart1 CMU(p13, p14);
 // Config the GPS receiver
 CGps Gps(p17, p18);
-// Coordinate system receiving - encapsulated inside of CGPS class
-//CUart3 Gps(p17, p18);		
 
 // steering and speed control
 CServo Steer(p22);

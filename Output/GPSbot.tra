@@ -30,7 +30,7 @@
 ### ADS-LD Output File: '.\Output\GPSbot.axf'
 ### ADS-LD Command File: '.\Output\GPSbot.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile '.\Output\GPSbot.lnp', Handle=0x00000400
+### Creating CmdFile '.\Output\GPSbot.lnp', Handle=0x00000308
 ### Writing '.lnp' file
 ### ADS-LD Command file '.\Output\GPSbot.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.
