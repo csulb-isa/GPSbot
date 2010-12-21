@@ -18,13 +18,15 @@
 
 CNmea::CNmea()
 {
+	// should initialize all structure buffers to 0 
+	// but the compilier may do that for us.
 }
 
-uint8_t CNmea::ParseGGA(char* input)
+uint32_t CNmea::ParseGGA(char* input)
 {
-	if (memcmp((char*)input, "GPGGA", 5) == NULL)
+	if (memcmp(input, "GPGGA", 5) == NULL)
 	{
-		strtok((char*)input, ",");				/* parse the header */
+		strtok(input, ",");						/* parse the header */
 		strtok(NULL, ",");						/* parse the UTC */
 		tempgga.lat = strtok(NULL, ",");		/* parse the latitude */
 		tempgga.lat_dir = strtok(NULL, ",");	/* parse the latitude direction */
@@ -39,83 +41,100 @@ uint8_t CNmea::ParseGGA(char* input)
 		//strtok(NULL, ",");					/* parse the unit of seperation */
 		//strtok(NULL, ",");					/* parse **unused */		
 		//strtok(NULL, ",");					/* parse **unused */
-		return TRUE;
+		memset(tempgga.sentence, 0x0, strlen(tempgga.sentence));
+		memcpy(tempgga.sentence, input, strlen(input));
+		return (1);
 	}
-	return FALSE;
+	return (0);
 }
 
-uint8_t CNmea::ParseRMC(char* input)
+uint32_t CNmea::ParseRMC(char* input)
 {
- 	if (memcmp((char*)input, "GPRMC", 5) == NULL)
+ 	if (memcmp(input, "GPRMC", 5) == NULL)
 	{
-		strtok((char*)input, ",");				/* parse the header */
-		temprmc.pos_stat = strtok(NULL, ",");	/* parse the UTC */
-		temprmc.lat = strtok(NULL, ",");		/* parse the position status */
-		temprmc.lat_dir = strtok(NULL, ",");	/* parse the latitude */
-		temprmc.lon = strtok(NULL, ",");		/* parse the latitude direction */
-		temprmc.lon_dir = strtok(NULL, ",");	/* parse the longitude */
-		strtok(NULL, ",");						/* parse the longitude direction */
-		temprmc.heading = strtok(NULL, ",");	/* parse the speed in knots */
-		//strtok(NULL, ",");					/* parse the heading in degree (true) */
-		//strtok(NULL, ",");					/* parse the date */
-		//strtok(NULL, ",");					/* parse the magnetic variation in degrees (future)  */
-		//strtok(NULL, ",");					/* parse the magnetic variation (future)*/
-		return TRUE;
+		strtok(input, ",");							/* parse the header */
+		temprmc.pos_stat = strtok(NULL, ",");		/* parse the UTC */
+		temprmc.lat = strtok(NULL, ",");			/* parse the position status */
+		temprmc.lat_dir = strtok(NULL, ",");		/* parse the latitude */
+		temprmc.lon = strtok(NULL, ",");			/* parse the latitude direction */
+		temprmc.lon_dir = strtok(NULL, ",");		/* parse the longitude */
+		strtok(NULL, ",");							/* parse the longitude direction */
+		temprmc.heading = strtok(NULL, ",");		/* parse the speed in knots */
+		//strtok(NULL, ",");						/* parse the heading in degree (true) */
+		//strtok(NULL, ",");						/* parse the date */
+		//strtok(NULL, ",");						/* parse the magnetic variation in degrees (future)  */
+		//strtok(NULL, ",");						/* parse the magnetic variation (future)*/
+		memset(temprmc.sentence, 0x0, strlen(temprmc.sentence));
+		memcpy(temprmc.sentence, input, strlen(input));
+		return (1);
 	}
-	return FALSE;
+	return (0);
 }
 
-uint8_t CNmea::ParseVTG(char* input)
+uint32_t CNmea::ParseVTG(char* input)
 {
-	if (memcmp((char*)input, "GPVTG", 5) == NULL)
+	if (memcmp(input, "GPVTG", 5) == NULL)
 	{
-		strtok((char*)input, ",");						/* parse the header */
-		tempvtg.course_true = strtok(NULL, ",");		/* parse the course */
-		strtok(NULL, ",");								/* parse the identifier */
-		tempvtg.course_magnetic = strtok(NULL, ",");	/* parse the course (magnetic) */
-		strtok(NULL, ",");								/* parse the identifier */
-		strtok(NULL, ",");								/* parse the speed in knots*/
-		strtok(NULL, ",");								/* parse the identifier */
-		tempvtg.speed_kmh = strtok(NULL, ",");			/* parse the speed in kilometers */
-		//strtok(NULL, ",");							/* parse the identifier */
-		return TRUE;
+		strtok(input, ",");							/* parse the header */
+		tempvtg.course_true = strtok(NULL, ",");	/* parse the course */
+		strtok(NULL, ",");							/* parse the identifier */
+		tempvtg.course_magnetic = strtok(NULL, ",");/* parse the course (magnetic) */
+		strtok(NULL, ",");							/* parse the identifier */
+		strtok(NULL, ",");							/* parse the speed in knots*/
+		strtok(NULL, ",");							/* parse the identifier */
+		tempvtg.speed_kmh = strtok(NULL, ",");		/* parse the speed in kilometers */
+		//strtok(NULL, ",");						/* parse the identifier */
+		memset(tempvtg.sentence, 0x0, strlen(tempvtg.sentence));
+		memcpy(tempvtg.sentence, input, strlen(input));
+		return (1);
 	}
-	return FALSE;
+	return (0);
 }
 
-uint8_t CNmea::ParseGLL(char* input)
+uint32_t CNmea::ParseGLL(char* input)
 {
-	if (memcmp((char*)input, "GPGLL", 5) == NULL)
+	if (memcmp(input, "GPGLL", 5) == NULL)
 	{
-		strtok((char*)input, ",");						/* parse the header */
-		tempgll.lat = strtok(NULL, ",");				/* parse the latitude */
-		tempgll.lat_dir = strtok(NULL, ",");			/* parse the latitude direction */
-		tempgll.lon = strtok(NULL, ",");				/* parse the longitude */
-		tempgll.lon_dir = strtok(NULL, ",");			/* parse the longitude direction */
-		strtok(NULL, ",");								/* parse the UTC */
-		tempgll.status = strtok(NULL, ",");				/* parse the status */
-		return TRUE;
+		strtok(input, ",");							/* parse the header */
+		tempgll.lat = strtok(NULL, ",");			/* parse the latitude */
+		tempgll.lat_dir = strtok(NULL, ",");		/* parse the latitude direction */
+		tempgll.lon = strtok(NULL, ",");			/* parse the longitude */
+		tempgll.lon_dir = strtok(NULL, ",");		/* parse the longitude direction */
+		strtok(NULL, ",");							/* parse the UTC */
+		tempgll.status = strtok(NULL, ",");			/* parse the status */
+		memset(tempgll.sentence, 0x0, strlen(tempgll.sentence));
+		memcpy(tempgll.sentence, input, strlen(input));
+		return (1);
 	}
-	return FALSE;
+	return (0);
 }
 
-void CNmea::ParseNmeaPacket(uint8_t* input)
+void CNmea::ParseNmeaPacket(char* input)
 {
 	// delete old contents and store whats new
-	memset(tempNMEAsentence, 0x00, strlen((char*)tempNMEAsentence));
-	memcpy(tempNMEAsentence, input, strlen((char*)input)+1);
-	// look for a sentence match and parse
-	if (ParseGGA((char*)input) == TRUE)
+	memset(tempNMEAsentence, 0x00, strlen(tempNMEAsentence));
+	memcpy(tempNMEAsentence, input, strlen(input+1));
+	// look for a sentence match and parse if found
+	// store in a global accessable objet
+	if (ParseGGA(input) == 1){
+		gga = tempgga;
 		return;
-	else if (ParseRMC((char*)input) == TRUE)
+	}
+	else if (ParseRMC(input) == 1){
+		rmc = temprmc;
 		return;
-	else if (ParseVTG((char*)input) == TRUE)
+	}
+	else if (ParseVTG(input) == 1){
+		vtg = tempvtg;
 		return;
-	else if (ParseGLL((char*)input) == TRUE)
+	}
+	else if (ParseGLL(input) == 1){
+		gll = tempgll;
 		return;
+	}
 }
 
-uint8_t* CNmea::GetNmeaPacket()
+char* CNmea::GetNmeaPacket()
 {
 	return tempNMEAsentence;
 }

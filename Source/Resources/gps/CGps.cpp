@@ -25,10 +25,12 @@
 #include "CGps.h"
 
 
-CGps::CGps(PinName tx, PinName rx)	:	_data(tx,rx)
+CGps::CGps(PinName tx, PinName rx)	:	_data(tx, rx)
 {
 	wptr = 0;
-	memset(tempPacket, 0x00, 255);
+	tempRawNmea.wptr = 0;
+	memset(tempPacket, 0x00, TEMP_SENTENCE_SIZE);
+	memset(tempRawNmea.data, 0x00, TEMP_RAW_NMEA_SIZE);
 }
 
 void CGps::Enable()
@@ -53,20 +55,16 @@ void CGps::Restart()
 
 void CGps::confignmeasentences(char* baud, uint8_t nmea, uint8_t broadcast)
 {
-	_data.Write("PDME,11,");
-	_data.Write(baud);
-	_data.Write(',');
-	_data.Write(nmea);
-	_data.Write(',');
-	_data.Write(broadcast);
-	_data.Write("\r\n");
+	char* tmp = {NULL};
+	sprintf(tmp, "$PDME,11,%s,%2x,%2x\r\n", baud, nmea, broadcast);
+	_data.Write(tmp);
 }
 
 void CGps::ChangeMaskAngle(char* input)
 {
-	_data.Write("$PDME,8,");
-	_data.Write(input);
-	_data.Write("\r\n");
+	char* tmp = {NULL};
+	sprintf(tmp, "$PDME,8,%s\r\n", input);
+	_data.Write(tmp);
 }
 
 void CGps::RequestPostitionError()
@@ -93,14 +91,33 @@ void CGps::BuildPacket()
 {
  	while(_data.IsReadable())
 	{
-	 	uint8_t scratch = _data.Read();
+	 	char scratch = _data.Read();
 		// store a new packet
+		StoreRawNmea(scratch);
 		if (scratch == '$'){
-			CNmea::ParseNmeaPacket(tempPacket);
+			ParseNmeaPacket(tempPacket);
 			memset(tempPacket, 0x00, 255);
 			wptr = 0;
 		}
-		else
+		else{
 			tempPacket[wptr++] = scratch;
+		}
 	}
 }
+
+void CGps::StoreRawNmea(char input)
+{
+	tempRawNmea.data[tempRawNmea.wptr++] = input;
+	if (tempRawNmea.wptr >= TEMP_RAW_NMEA_SIZE){
+		memset(tempRawNmea.data, 0x00, TEMP_RAW_NMEA_SIZE);
+		tempRawNmea.wptr = 0;
+	}	
+}
+
+void CGps::GetRawNmea(char* input)
+{
+ 	memcpy(tempRawNmea.data, input, tempRawNmea.wptr);
+	memset(tempRawNmea.data, 0x00, TEMP_RAW_NMEA_SIZE);
+}
+
+

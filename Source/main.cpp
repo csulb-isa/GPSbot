@@ -78,17 +78,20 @@ CDigitalCompass Compass(p9, p10);
 
 // Tickers for handling events that that are embedded within classes
 // and would otherwise need to be called by the application
-Ticker GpsParseTic;		// enable and disable with Gps
-Ticker PcCommParseTic;	// enable and disable with Xbee
-Ticker SendStatus;		// update pc with run status
+Ticker ParseGps;		// enable and disable with Gps
+Ticker ParsePcComm;	// enable and disable with Xbee
+Ticker SendPcComm;		// update pc with run status
 
 // start of the runtime application
 int main() 
 {	
-	flip.attach(&fliphandler, 0.125);
 	// start the PC connection, camera and GPS
 	Xbee.Baud(9600);
 	Xbee.Enable();
+	
+	// may poll in while loop if it gets too large
+	ParsePcComm.attach(&BuildPcPacket, 0.1);
+	SendPcComm.attach(&TransmitVitals, 1.0);
 
 	CMU.Baud(9600);
 	CMU.Enable();
@@ -100,7 +103,7 @@ int main()
 	// 250 mili-seconds.  Time can be adjusted based on amount
 	// of sentences that are enabled
 	Gps.Enable();
-	GpsParseTic.attach(&Gps, &CGps::BuildPacket, 0.250);
+	ParseGps.attach(&Gps, &CGps::BuildPacket, 0.250);
 	
 	// configure all the sensors on the car
 	// these are the 4 sonar sensors
@@ -125,11 +128,8 @@ int main()
 	// onboard sensor.  LED1 is used to visualize the speed pulse
 	TravelSpeed.Enable();
 
-	// indicate that we are moving on and prepare for 
-	// incoming packets of data.  These packets are from the 
-	// Xbee module
-	PcCommParseTic.attach(&BuildPcPacket, 1.0);
-	SendStatus.attach(&TransmitStatus, 3.0);
+	// indicate that we are running
+	flip.attach(&fliphandler, 0.125);
 
 	// Connect to compass and start getting data
 	Compass.Config();
@@ -141,7 +141,9 @@ int main()
 	// here is the main program
 	while(1)
 	{
-	 	wait(1);
+	 	// incorporate timed read in class
+		// need hardware to test
+		wait(1);
 		Compass.Read();
 	}
 }

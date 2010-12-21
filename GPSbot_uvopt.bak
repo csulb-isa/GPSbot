@@ -142,6 +142,23 @@
           <Name>-O463 -S0 -C0 -FO7 -FD10000000 -FC800 -FN1 -FF0LPC_IAP_512 -FS00 -FL080000)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
+      <Breakpoint>
+        <Bp>
+          <Number>0</Number>
+          <Type>0</Type>
+          <LineNumber>55</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>CGps.h</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+      </Breakpoint>
       <DebugFlag>
         <trace>0</trace>
         <periodic>1</periodic>
@@ -184,10 +201,10 @@
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>1</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>25</TopLine>
-      <CurrentLine>50</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Source\main.cpp</PathWithFileName>
       <FilenameWithoutPath>main.cpp</FilenameWithoutPath>
@@ -200,8 +217,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>134</TopLine>
+      <CurrentLine>134</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Source\pccomm.cpp</PathWithFileName>
       <FilenameWithoutPath>pccomm.cpp</FilenameWithoutPath>
@@ -331,10 +348,10 @@
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>39</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>1</CurrentLine>
+      <TopLine>13</TopLine>
+      <CurrentLine>13</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Source\Resources\compass\cdcompass.cpp</PathWithFileName>
       <FilenameWithoutPath>cdcompass.cpp</FilenameWithoutPath>
@@ -345,10 +362,10 @@
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>36</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>100</TopLine>
+      <CurrentLine>120</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Source\Resources\gps\CGps.cpp</PathWithFileName>
       <FilenameWithoutPath>CGps.cpp</FilenameWithoutPath>
@@ -359,10 +376,10 @@
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>46</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>79</TopLine>
+      <CurrentLine>79</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Source\Resources\gps\CNmea.cpp</PathWithFileName>
       <FilenameWithoutPath>CNmea.cpp</FilenameWithoutPath>
@@ -387,7 +404,7 @@
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>15</ColumnNumber>
+      <ColumnNumber>13</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>10</TopLine>
       <CurrentLine>27</CurrentLine>
@@ -403,8 +420,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>91</TopLine>
+      <CurrentLine>91</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Source\Resources\motor control\CSpeed.cpp</PathWithFileName>
       <FilenameWithoutPath>CSpeed.cpp</FilenameWithoutPath>
@@ -503,9 +520,9 @@
   </Group>
 
   <AlienFiles>
-    <PathWithFilename>C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\main.h</PathWithFilename>
+    <PathWithFilename>C:\Embedded Design\Arm Projects\Cortex M3\Projects\GPSbot\Source\Resources\gps\cnmea.h</PathWithFilename>
     <TopLine>1</TopLine>
-    <CurrentLine>12</CurrentLine>
+    <CurrentLine>9</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -529,23 +546,41 @@
   </AlienFiles>
 
   <MDIGroups>
-    <Orientation>1</Orientation>
-    <ActiveMDIGroup>0</ActiveMDIGroup>
+    <Orientation>3</Orientation>
+    <ActiveMDIGroup>1</ActiveMDIGroup>
     <MDIGroup>
-      <Size>100</Size>
+      <Size>33</Size>
       <ActiveTab>1</ActiveTab>
       <Documents>
         <Doc>
           <Name>.\Source\main.cpp</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>25</TopLine>
-          <CurrentLine>50</CurrentLine>
+          <ColumnNumber>1</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>1</CurrentLine>
         </Doc>
         <Doc>
-          <Name>Source\main.h</Name>
-          <ColumnNumber>42</ColumnNumber>
+          <Name>.\Source\Resources\gps\CNmea.cpp</Name>
+          <ColumnNumber>46</ColumnNumber>
+          <TopLine>79</TopLine>
+          <CurrentLine>79</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\Source\.\Resources\gps\cnmea.h</Name>
+          <ColumnNumber>17</ColumnNumber>
           <TopLine>1</TopLine>
-          <CurrentLine>12</CurrentLine>
+          <CurrentLine>9</CurrentLine>
+        </Doc>
+      </Documents>
+    </MDIGroup>
+    <MDIGroup>
+      <Size>67</Size>
+      <ActiveTab>0</ActiveTab>
+      <Documents>
+        <Doc>
+          <Name>.\Source\pccomm.cpp</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>134</TopLine>
+          <CurrentLine>134</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>

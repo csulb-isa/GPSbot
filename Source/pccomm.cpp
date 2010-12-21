@@ -19,10 +19,13 @@
 
 extern CUart0 PC;
 extern CUart2 Xbee;
+extern CUart1 CMU;
+extern CGps Gps;
 extern CSonar Sonar1, Sonar2, Sonar3, Sonar4;
 extern CSpeed TravelSpeed;
 extern CServo Steer, Speed;
-extern C2y0a700 Ir_Left, Ir_Right;
+extern C2y0a700 Ir1, Ir2, Ir3;
+extern CDigitalCompass Compass;
 
 void BuildPcPacket()
 {
@@ -30,97 +33,125 @@ void BuildPcPacket()
 	static char tpkt[256];
 	static uint8_t cntr = 0;
 	
-	while(Xbee.IsReadable())
-	{
-	 	tpkt[cntr++] = Xbee.Read();
+	while(Xbee.IsReadable()){
+		tpkt[cntr++] = Xbee.Read();
 		// the last byte of a packet was found
-		if(tpkt[cntr-1] == ']')
-		{
+		if(tpkt[cntr-1] == ']'){
 			PC.Write(tpkt);
 			ParsePcPacket(tpkt);
 			memset(tpkt, 0x00, strlen((char*)tpkt));
 			cntr = 0;
+		}
+		else if(tpkt[cntr-1] == '['){
+		 	if (cntr != 1){
+			 	memset(tpkt, 0x00, strlen((char*)tpkt));
+				cntr = 0;
+				tpkt[cntr++] = '[';
+			}
 		}	
 	}
 }
 
 void ParsePcPacket(char* input)
 {
-	char* decypher;
-	if (memcmp((char*)input, "[CONFIG", 7) == NULL){
-	 	Xbee.Write("CONFIG found\n");
-	}
-	else if (memcmp((char*)input, "[READ", 5) == NULL){
-	   	Xbee.Write("READ found\n");
-	}
-	else if (memcmp((char*)input, "[MONITOR", 8) == NULL){
-	 	// ignore the packet header
-		strtok((char*)input, "?");
-		// get the goods
-		decypher = strtok(NULL, "?");
-		// do what is requested
-		if (memcmp((char*)decypher, "ENABLE", 6) == NULL)
-			Xbee.Write("MONITOR Enabled\n");
-		else if (memcmp((char*)decypher, "DISABLE", 6) == NULL)
-			Xbee.Write("MONITOR Disabled\n");
+	char* data = {NULL};
+	// These are packet headers
+	if (memcmp((char*)input, "[COMMAND", 7) == NULL){
+		// ignore the packet header
+		strtok((char*)input, "<");
+		// find out what peripheral to control
+		if (memcmp((char*)input, "SPEED>", 6) == NULL){
+			// ignore the command name
+			strtok((char*)input, ">");
+			// get the data from the packet
+			data = strtok(NULL, "]");
+			// convert from string to binary and pass to peripheral
+
+			// send a response to the host
+			Xbee.Write("[COMMAND< >OK]\n");		
+		}
+		else if (memcmp((char*)input, "STEER>", 6) == NULL){
+			// ignore the command name
+			strtok((char*)input, ">");
+			// get the data from the packet
+			data = strtok(NULL, "]");
+			// convert from string to binary and pass to peripheral
+
+			// send a response to the host
+			Xbee.Write("[COMMAND< >OK]\n");
+		}
 	}
 }
 
-void TransmitStatus(void)
+void TransmitVitals(void)
 {
-	char tmp[64] = {""};
-	static int a = 0;
-	static int b = 10;
-	static int c = 20;
-	static int d = 30;
-	static int e = 40;
-	static int f = 50;
-	static int g = 60;
-	static int h = 70;
-	static int i = 80;
-	a++;
-	b++;
-	c++;
-	d++;
-	e++;
-	f++;
-	g++;
-	h++;
-	i++;
+	char tmp_vital[64] = {NULL};
+	// SONAR SENSORS
+	sprintf(tmp_vital, "[STATUS<SONAR_L1>%d-in]\n", Sonar1.GetDistanceIn());
+	Xbee.Write(tmp_vital);
+	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
 	
-	sprintf(tmp, "[STATUS<SONAR_L1>%d]\n", a);
-	Xbee.Write(tmp);
-	memset(tmp, 0x00, strlen((char*)tmp));
-	
-	sprintf(tmp, "[STATUS<SONAR_L2>%d]\n", b);
-	Xbee.Write(tmp);
-	memset(tmp, 0x00, strlen((char*)tmp));
+	sprintf(tmp_vital, "[STATUS<SONAR_L2>%d-in]\n", Sonar2.GetDistanceIn());
+	Xbee.Write(tmp_vital);
+	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
 
-	sprintf(tmp, "[STATUS<SONAR_R2>%d]\n", c);
-	Xbee.Write(tmp);
-	memset(tmp, 0x00, strlen((char*)tmp));
+	sprintf(tmp_vital, "[STATUS<SONAR_R2>%d-in]\n", Sonar3.GetDistanceIn());
+	Xbee.Write(tmp_vital);
+	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
 
-	sprintf(tmp, "[STATUS<SONAR_R1>%d]\n", d);
-	Xbee.Write(tmp);
-	memset(tmp, 0x00, strlen((char*)tmp));
-		
-	sprintf(tmp, "[STATUS<SERVO_POS>%d]\n", e);
-	Xbee.Write(tmp);
-	memset(tmp, 0x00, strlen((char*)tmp));
+	sprintf(tmp_vital, "[STATUS<SONAR_R1>%d-in]\n", Sonar4.GetDistanceIn());
+	Xbee.Write(tmp_vital);
+	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
+	// IR SENSORS	
+	sprintf(tmp_vital, "[STATUS<IR1>%d-v]\n", Ir1.GetDistance());	
+	Xbee.Write(tmp_vital);
+	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
 
-	sprintf(tmp, "[STATUS<SPEED_POS>%d]\n", f);
-	Xbee.Write(tmp);
-	memset(tmp, 0x00, strlen((char*)tmp));
+	sprintf(tmp_vital, "[STATUS<IR2>%d-v]\n", Ir2.GetDistance());	
+	Xbee.Write(tmp_vital);
+	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
+	// SERVO STATUS
+	sprintf(tmp_vital, "[STATUS<SERVO_STEER>%d]\n", Steer.GetPos());
+	Xbee.Write(tmp_vital);
+	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
 
-	sprintf(tmp, "[STATUS<SPEED>%d]\n", g);	
-	Xbee.Write(tmp);
-	memset(tmp, 0x00, strlen((char*)tmp));
+	sprintf(tmp_vital, "[STATUS<SERVO_SPEED>%d]\n", Speed.GetPos());
+	Xbee.Write(tmp_vital);
+	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
+	// MOVING SPEED
+	sprintf(tmp_vital, "[STATUS<SPEED>%d-mph]\n", TravelSpeed.GetMph());	
+	Xbee.Write(tmp_vital);
+	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
+	// COMPASS READINGS
+	sprintf(tmp_vital, "[STATUS<HEADING-X>%d]\n", Compass.GetX());	
+	Xbee.Write(tmp_vital);
+	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
 
-	sprintf(tmp, "[STATUS<IR1>%d]\n", h);	
-	Xbee.Write(tmp);
-	memset(tmp, 0x00, strlen((char*)tmp));
+	sprintf(tmp_vital, "[STATUS<HEADING-Y>%d]\n", Compass.GetY());	
+	Xbee.Write(tmp_vital);
+	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
 
-	sprintf(tmp, "[STATUS<IR2>%d]\n", i);	
-	Xbee.Write(tmp);
-	memset(tmp, 0x00, strlen((char*)tmp));
+	sprintf(tmp_vital, "[STATUS<HEADING-Z>%d]\n", Compass.GetZ());	
+	Xbee.Write(tmp_vital);
+	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
+
+	sprintf(tmp_vital, "[STATUS<HEADING>%d]\n", Compass.GetHeading());	
+	Xbee.Write(tmp_vital);
+	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
+	// GPS READINGS
+	sprintf(tmp_vital, "[STATUS<GPS-GGA>%s]\n", Gps.gga.sentence);	
+	Xbee.Write(tmp_vital);
+	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
+
+	sprintf(tmp_vital, "[STATUS<GPS-VTG>%s]\n", Gps.vtg.sentence);	
+	Xbee.Write(tmp_vital);
+	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
+
+	sprintf(tmp_vital, "[STATUS<GPS-RMC>%s]\n", Gps.rmc.sentence);	
+	Xbee.Write(tmp_vital);
+	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
+
+	sprintf(tmp_vital, "[STATUS<GPS-GLL>%s]\n", Gps.gll.sentence);	
+	Xbee.Write(tmp_vital);
+	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
 }

@@ -11,7 +11,7 @@
 // Methods that are called 
 void BuildPcPacket();
 void ParsePcPacket(char*);
-void TransmitStatus();
+void TransmitVitals();
 
 #ifdef __cplusplus
 }

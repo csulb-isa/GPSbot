@@ -30,12 +30,20 @@
 #define MAX_ID		16
 #define MAX_BUF		256
 
+#define TEMP_SENTENCE_SIZE	256
+#define TEMP_RAW_NMEA_SIZE	1024
+
 class CGps	: 	public CNmea
 {
 private:
 	CUart3 _data;
-	uint8_t tempPacket[256];
+	char tempPacket[256];
 	uint8_t wptr;
+	
+	struct{
+		uint32_t wptr;
+		char data[TEMP_RAW_NMEA_SIZE];
+	}tempRawNmea;
 									
 	// This will format the outcoming messages
 	void confignmeasentences(char*, uint8_t, uint8_t);
@@ -53,6 +61,8 @@ public:
 	void ChangeMaskAngle(char*);	/* calibrate receiver for rough terain */
 	void RequestPostitionError();	/* ask the host for some info */
 	void BuildPacket();
+	void StoreRawNmea(char);
+	void GetRawNmea(char*);
 };
 
 #endif
