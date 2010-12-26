@@ -86,7 +86,7 @@ Ticker SendPcComm;		// update pc with run status
 int main() 
 {	
 	// start the PC connection, camera and GPS
-	Xbee.Baud(9600);
+	Xbee.Baud(57600);
 	Xbee.Enable();
 	
 	// may poll in while loop if it gets too large
@@ -102,8 +102,8 @@ int main()
 	// start the GPS receiver and look for packets every
 	// 250 mili-seconds.  Time can be adjusted based on amount
 	// of sentences that are enabled
-	Gps.Enable();
-	ParseGps.attach(&Gps, &CGps::BuildPacket, 0.250);
+	//Gps.Enable();
+	//ParseGps.attach(&Gps, &CGps::BuildPacket, 0.250);
 	
 	// configure all the sensors on the car
 	// these are the 4 sonar sensors

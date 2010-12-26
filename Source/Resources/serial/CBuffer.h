@@ -4,7 +4,7 @@
 // include data types
 #include ".\mbedLibrary\mbed.h"
 
-#define BUFFER_SIZE 255
+#define BUFFER_SIZE 1024
 #ifndef TRUE
 #define TRUE	0x1
 #define FALSE	0x0

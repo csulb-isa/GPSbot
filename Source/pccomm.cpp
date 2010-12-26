@@ -103,11 +103,11 @@ void TransmitVitals(void)
 	Xbee.Write(tmp_vital);
 	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
 	// IR SENSORS	
-	sprintf(tmp_vital, "[STATUS<IR1>%d-v]\n", Ir1.GetDistance());	
+	sprintf(tmp_vital, "[STATUS<IR1>%f-v]\n", Ir1.GetVoltage());	
 	Xbee.Write(tmp_vital);
 	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
 
-	sprintf(tmp_vital, "[STATUS<IR2>%d-v]\n", Ir2.GetDistance());	
+	sprintf(tmp_vital, "[STATUS<IR2>%f-v]\n", Ir2.GetVoltage());	
 	Xbee.Write(tmp_vital);
 	memset(tmp_vital, 0x00, strlen((char*)tmp_vital));
 	// SERVO STATUS

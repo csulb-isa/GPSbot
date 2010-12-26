@@ -201,10 +201,10 @@
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>1</ColumnNumber>
+      <ColumnNumber>8</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>1</CurrentLine>
+      <TopLine>106</TopLine>
+      <CurrentLine>106</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Source\main.cpp</PathWithFileName>
       <FilenameWithoutPath>main.cpp</FilenameWithoutPath>
@@ -215,10 +215,10 @@
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>35</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>134</TopLine>
-      <CurrentLine>134</CurrentLine>
+      <TopLine>98</TopLine>
+      <CurrentLine>106</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Source\pccomm.cpp</PathWithFileName>
       <FilenameWithoutPath>pccomm.cpp</FilenameWithoutPath>
@@ -348,10 +348,10 @@
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>39</ColumnNumber>
+      <ColumnNumber>5</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>13</TopLine>
-      <CurrentLine>13</CurrentLine>
+      <TopLine>30</TopLine>
+      <CurrentLine>42</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Source\Resources\compass\cdcompass.cpp</PathWithFileName>
       <FilenameWithoutPath>cdcompass.cpp</FilenameWithoutPath>
@@ -378,8 +378,8 @@
       <Focus>0</Focus>
       <ColumnNumber>46</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>79</TopLine>
-      <CurrentLine>79</CurrentLine>
+      <TopLine>18</TopLine>
+      <CurrentLine>18</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Source\Resources\gps\CNmea.cpp</PathWithFileName>
       <FilenameWithoutPath>CNmea.cpp</FilenameWithoutPath>
@@ -432,10 +432,10 @@
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>15</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>16</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Source\Resources\serial\CBuffer.cpp</PathWithFileName>
       <FilenameWithoutPath>CBuffer.cpp</FilenameWithoutPath>
@@ -504,7 +504,7 @@
       <Focus>0</Focus>
       <ColumnNumber>53</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>78</TopLine>
+      <TopLine>70</TopLine>
       <CurrentLine>78</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Source\Resources\ir distance\C2y0a700.cpp</PathWithFileName>
@@ -547,22 +547,22 @@
 
   <MDIGroups>
     <Orientation>3</Orientation>
-    <ActiveMDIGroup>1</ActiveMDIGroup>
+    <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
-      <Size>33</Size>
+      <Size>45</Size>
       <ActiveTab>1</ActiveTab>
       <Documents>
         <Doc>
-          <Name>.\Source\main.cpp</Name>
-          <ColumnNumber>1</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>1</CurrentLine>
-        </Doc>
-        <Doc>
           <Name>.\Source\Resources\gps\CNmea.cpp</Name>
           <ColumnNumber>46</ColumnNumber>
-          <TopLine>79</TopLine>
-          <CurrentLine>79</CurrentLine>
+          <TopLine>18</TopLine>
+          <CurrentLine>18</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\Source\main.cpp</Name>
+          <ColumnNumber>8</ColumnNumber>
+          <TopLine>106</TopLine>
+          <CurrentLine>106</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\Source\.\Resources\gps\cnmea.h</Name>
@@ -570,17 +570,29 @@
           <TopLine>1</TopLine>
           <CurrentLine>9</CurrentLine>
         </Doc>
+        <Doc>
+          <Name>.\Source\Resources\compass\cdcompass.cpp</Name>
+          <ColumnNumber>5</ColumnNumber>
+          <TopLine>30</TopLine>
+          <CurrentLine>42</CurrentLine>
+        </Doc>
       </Documents>
     </MDIGroup>
     <MDIGroup>
-      <Size>67</Size>
+      <Size>55</Size>
       <ActiveTab>0</ActiveTab>
       <Documents>
         <Doc>
           <Name>.\Source\pccomm.cpp</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>134</TopLine>
-          <CurrentLine>134</CurrentLine>
+          <ColumnNumber>35</ColumnNumber>
+          <TopLine>98</TopLine>
+          <CurrentLine>106</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\Source\Resources\ir distance\C2y0a700.cpp</Name>
+          <ColumnNumber>53</ColumnNumber>
+          <TopLine>70</TopLine>
+          <CurrentLine>78</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>
