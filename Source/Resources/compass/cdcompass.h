@@ -60,6 +60,7 @@ class CDigitalCompass
 private:
 	// peripheral members
 	I2C _compass;
+	Ticker _readtime;
 	// variable members
 	float rslt;
 	int32_t data_x, data_y, data_z;
@@ -72,6 +73,8 @@ public:
 	CDigitalCompass(PinName, PinName);
 	// called to setup the module
 	void Config();
+	void Enable();
+	void Disable();
 	// should  be called at an interval based on the config setting for 
 	// the refresh rate
 	void Read();

@@ -17,6 +17,9 @@
 
 #include "pccomm.h"
 
+extern DigitalOut led1;
+extern DigitalOut led2;
+
 extern CUart0 PC;
 extern CUart2 Xbee;
 extern CUart1 CMU;
@@ -37,7 +40,7 @@ void BuildPcPacket()
 		tpkt[cntr++] = Xbee.Read();
 		// the last byte of a packet was found
 		if(tpkt[cntr-1] == ']'){
-			PC.Write(tpkt);
+			//PC.Write(tpkt);
 			ParsePcPacket(tpkt);
 			memset(tpkt, 0x00, strlen((char*)tpkt));
 			cntr = 0;
@@ -54,19 +57,23 @@ void BuildPcPacket()
 
 void ParsePcPacket(char* input)
 {
-	char* data = {NULL};
+	//char data[16] = {NULL};
 	// These are packet headers
 	if (memcmp((char*)input, "[COMMAND", 7) == NULL){
 		// ignore the packet header
 		strtok((char*)input, "<");
+		input = strtok(NULL, "]");
 		// find out what peripheral to control
 		if (memcmp((char*)input, "SPEED>", 6) == NULL){
 			// ignore the command name
 			strtok((char*)input, ">");
 			// get the data from the packet
-			data = strtok(NULL, "]");
+			input = strtok(NULL, "]");
 			// convert from string to binary and pass to peripheral
-
+			int result = atoi(input);
+			led1 = !led1;
+			//Speed.SetPos(result);
+			Speed.UpdatePos(result);
 			// send a response to the host
 			Xbee.Write("[COMMAND< >OK]\n");		
 		}
@@ -74,9 +81,12 @@ void ParsePcPacket(char* input)
 			// ignore the command name
 			strtok((char*)input, ">");
 			// get the data from the packet
-			data = strtok(NULL, "]");
+			input = strtok(NULL, "]");
 			// convert from string to binary and pass to peripheral
-
+			int result = atoi(input);
+			led2 = !led2;
+			//Steer.SetPos(result);
+			Steer.UpdatePos(result);
 			// send a response to the host
 			Xbee.Write("[COMMAND< >OK]\n");
 		}
@@ -85,7 +95,7 @@ void ParsePcPacket(char* input)
 
 void TransmitVitals(void)
 {
-	char tmp_vital[64] = {NULL};
+	char tmp_vital[256] = {NULL};
 	// SONAR SENSORS
 	sprintf(tmp_vital, "[STATUS<SONAR_L1>%d-in]\n", Sonar1.GetDistanceIn());
 	Xbee.Write(tmp_vital);

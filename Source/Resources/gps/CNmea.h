@@ -54,13 +54,6 @@ private:
 	uint32_t ParseGLL(char*);
 	char tempNMEAsentence[256];
 
-protected:
-	// objects for parsing data
-	GGA_T tempgga;
-	VTG_T tempvtg;
-	RMC_T temprmc;
-	GLL_T tempgll;
-
 public:
 	// objects for parsing data
 	GGA_T gga;

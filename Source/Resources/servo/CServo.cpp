@@ -52,6 +52,7 @@
 
 CServo::CServo(PinName pin)	:	 _pwm(pin)
 {
+	adj_val = set_val = 0;
 	// need to set the cycle period
 	_pwm.period_ms(PWM_PERIOD);
 	// Set the wheels straignt (pulse width)
@@ -90,9 +91,36 @@ int8_t CServo::GetPos()
 //
 //
 
-void CServo::SetPos(int8_t input) 
+void CServo::UpdatePos(int8_t input)
+{
+ 	set_val = input;
+	_update.attach_us(this, &CServo::SetPos, 2000);
+}
+
+void CServo::SetPos() 
 {    
-    if ((input == 0) || (input == 0x80)){    	/* we are at dead center, 90deg. */
+    if (adj_val == set_val){
+		_update.detach();
+	}
+	else if (adj_val < set_val){
+		adj_val++;
+	}
+	else if (adj_val > set_val){
+		adj_val--;
+	}
+	
+	if ((adj_val == 0) || (adj_val == 0x80)){    	/* we are at dead center, 90deg. */
+        _pwm = (PWM_ABS_CENTER/PWM_PERIOD);		/* Set the wheels straignt (pulse width) */
+    } 
+    else{     					 
+        _pwm = ( (adj_val*PWM_RESOLUTION) + 
+		         (PWM_ABS_CENTER/PWM_PERIOD) );	/* angle*resolution + 90deg */
+	}
+}
+
+void CServo::SetPos(int8_t input) 
+{	
+	if ((input == 0) || (input == 0x80)){    	/* we are at dead center, 90deg. */
         _pwm = (PWM_ABS_CENTER/PWM_PERIOD);		/* Set the wheels straignt (pulse width) */
     } 
     else{     					 

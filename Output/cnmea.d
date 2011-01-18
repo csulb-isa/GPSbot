@@ -1,14 +1,8 @@
 .\Output\cnmea.o: Source\Resources\gps\CNmea.cpp
-.\Output\cnmea.o: Source\Resources\gps\CNmea.h
-.\Output\cnmea.o: .\Source\.\mbedLibrary\mbed.h
-.\Output\cnmea.o: C:\Keil\\ARM\RV31\INC\stdio.h
-.\Output\cnmea.o: C:\Keil\\ARM\RV31\INC\stdlib.h
-.\Output\cnmea.o: C:\Keil\\ARM\RV31\INC\string.h
-.\Output\cnmea.o: C:\Keil\\ARM\RV31\INC\math.h
-.\Output\cnmea.o: C:\Keil\\ARM\RV31\INC\time.h
-.\Output\cnmea.o: .\Source\.\mbedLibrary\error.h
-.\Output\cnmea.o: .\Source\.\mbedLibrary\DigitalIn.h
-.\Output\cnmea.o: .\Source\.\mbedLibrary\platform.h
+.\Output\cnmea.o: .\Source\main.h
+.\Output\cnmea.o: .\Source\.\pccomm.h
+.\Output\cnmea.o: .\Source\.\main.h
+.\Output\cnmea.o: .\Source\.\.\Resources\serial\CUart.h
 .\Output\cnmea.o: .\Source\.\mbedLibrary\PinNames.h
 .\Output\cnmea.o: .\Source\.\mbedLibrary\cmsis.h
 .\Output\cnmea.o: .\Source\.\mbedLibrary\lib26\LPC1768\LPC17xx.h
@@ -19,6 +13,16 @@
 .\Output\cnmea.o: .\Source\.\mbedLibrary\lib26\LPC1768\system_LPC17xx.h
 .\Output\cnmea.o: .\Source\.\mbedLibrary\cmsis_nvic.h
 .\Output\cnmea.o: .\Source\.\mbedLibrary\cmsis.h
+.\Output\cnmea.o: .\Source\.\Resources\serial\CBuffer.h
+.\Output\cnmea.o: .\Source\.\mbedLibrary\mbed.h
+.\Output\cnmea.o: C:\Keil\\ARM\RV31\INC\stdio.h
+.\Output\cnmea.o: C:\Keil\\ARM\RV31\INC\stdlib.h
+.\Output\cnmea.o: C:\Keil\\ARM\RV31\INC\string.h
+.\Output\cnmea.o: C:\Keil\\ARM\RV31\INC\math.h
+.\Output\cnmea.o: C:\Keil\\ARM\RV31\INC\time.h
+.\Output\cnmea.o: .\Source\.\mbedLibrary\error.h
+.\Output\cnmea.o: .\Source\.\mbedLibrary\DigitalIn.h
+.\Output\cnmea.o: .\Source\.\mbedLibrary\platform.h
 .\Output\cnmea.o: .\Source\.\mbedLibrary\PeripheralNames.h
 .\Output\cnmea.o: .\Source\.\mbedLibrary\Base.h
 .\Output\cnmea.o: C:\Keil\\ARM\RV31\INC\cstdlib
@@ -59,3 +63,10 @@
 .\Output\cnmea.o: .\Source\.\mbedLibrary\InterruptIn.h
 .\Output\cnmea.o: .\Source\.\mbedLibrary\wait_api.h
 .\Output\cnmea.o: .\Source\.\mbedLibrary\rtc_time.h
+.\Output\cnmea.o: .\Source\.\Resources\servo\CServo.h
+.\Output\cnmea.o: .\Source\.\Resources\sonar\CSrf05.h
+.\Output\cnmea.o: .\Source\.\Resources\motor control\CSpeed.h
+.\Output\cnmea.o: .\Source\.\Resources\ir distance\C2y0a700.h
+.\Output\cnmea.o: .\Source\.\Resources\gps\CGps.h
+.\Output\cnmea.o: .\Source\.\Resources\gps\cnmea.h
+.\Output\cnmea.o: .\Source\.\Resources\compass\cdcompass.h

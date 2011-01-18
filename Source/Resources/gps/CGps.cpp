@@ -22,8 +22,10 @@
  *				on arrays of data that are passed into it.
  */
 
+#include "main.h"
 #include "CGps.h"
 
+extern CUart0 PC; 
 
 CGps::CGps(PinName tx, PinName rx)	:	_data(tx, rx)
 {
@@ -37,8 +39,8 @@ void CGps::Enable()
 {
  	_data.Baud(4800);
 	_data.Enable();
-	//confignmeasentences(NMEA_BAUD_4800, (USE_GGA5 | USE_VTG | USE_GLL | USE_RMC), BROADCAST_ALWAYS);
-	confignmeasentences(NMEA_BAUD_4800, (USE_GGA5), BROADCAST_ALWAYS);
+	confignmeasentences(NMEA_BAUD_4800, (USE_GGA5 | USE_VTG | USE_GLL | USE_RMC), BROADCAST_ALWAYS);
+	//confignmeasentences(NMEA_BAUD_4800, (USE_GGA5), BROADCAST_ALWAYS);
 	sendcoldstart();
 }
 
@@ -55,8 +57,8 @@ void CGps::Restart()
 
 void CGps::confignmeasentences(char* baud, uint8_t nmea, uint8_t broadcast)
 {
-	char* tmp = {NULL};
-	sprintf(tmp, "$PDME,11,%s,%2x,%2x\r\n", baud, nmea, broadcast);
+	char tmp[64] = {NULL};
+	sprintf(tmp, "$PDME,11,%s,%02x,%02x\r\n", baud, nmea, broadcast);
 	_data.Write(tmp);
 }
 
@@ -89,8 +91,7 @@ void CGps::sendhotstart()
 
 void CGps::BuildPacket()
 {
- 	while(_data.IsReadable())
-	{
+ 	while(_data.IsReadable()){
 	 	char scratch = _data.Read();
 		// store a new packet
 		StoreRawNmea(scratch);

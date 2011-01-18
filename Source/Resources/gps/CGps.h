@@ -5,12 +5,12 @@
 #include ".\Resources\gps\cnmea.h"
 #include ".\Resources\serial\CUart.h"
 
-#define NMEA_BAUD_4800		"4800,"
-#define NMEA_BAUD_9600		"9600,"
-#define NMEA_BAUD_19200		"19200,"
-#define NMEA_BAUD_38400		"38400,"
-#define NMEA_BAUD_57600		"57600,"
-#define NMEA_BAUD_115200	"115200,"
+#define NMEA_BAUD_4800		"4800"
+#define NMEA_BAUD_9600		"9600"
+#define NMEA_BAUD_19200		"19200"
+#define NMEA_BAUD_38400		"38400"
+#define NMEA_BAUD_57600		"57600"
+#define NMEA_BAUD_115200	"115200"
 
 #define USE_GGA		0x01
 #define USE_GGA5	0x02

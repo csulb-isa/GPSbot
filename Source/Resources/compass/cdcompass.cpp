@@ -30,6 +30,16 @@ void CDigitalCompass::Config()
 	_compass.stop();
 }
 
+void CDigitalCompass::Enable()
+{
+	_readtime.attach(this, &CDigitalCompass::Read, 1.0);
+}
+
+void CDigitalCompass::Disable()
+{
+ 	_readtime.detach();
+}
+
 void CDigitalCompass::CalculateHeading()
 {
 	// having troubles here - defective sensor??

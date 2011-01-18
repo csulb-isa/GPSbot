@@ -1,15 +1,8 @@
 .\Output\cgps.o: Source\Resources\gps\CGps.cpp
-.\Output\cgps.o: Source\Resources\gps\CGps.h
-.\Output\cgps.o: .\Source\.\Resources\gps\cnmea.h
-.\Output\cgps.o: .\Source\.\mbedLibrary\mbed.h
-.\Output\cgps.o: C:\Keil\\ARM\RV31\INC\stdio.h
-.\Output\cgps.o: C:\Keil\\ARM\RV31\INC\stdlib.h
-.\Output\cgps.o: C:\Keil\\ARM\RV31\INC\string.h
-.\Output\cgps.o: C:\Keil\\ARM\RV31\INC\math.h
-.\Output\cgps.o: C:\Keil\\ARM\RV31\INC\time.h
-.\Output\cgps.o: .\Source\.\mbedLibrary\error.h
-.\Output\cgps.o: .\Source\.\mbedLibrary\DigitalIn.h
-.\Output\cgps.o: .\Source\.\mbedLibrary\platform.h
+.\Output\cgps.o: .\Source\main.h
+.\Output\cgps.o: .\Source\.\pccomm.h
+.\Output\cgps.o: .\Source\.\main.h
+.\Output\cgps.o: .\Source\.\.\Resources\serial\CUart.h
 .\Output\cgps.o: .\Source\.\mbedLibrary\PinNames.h
 .\Output\cgps.o: .\Source\.\mbedLibrary\cmsis.h
 .\Output\cgps.o: .\Source\.\mbedLibrary\lib26\LPC1768\LPC17xx.h
@@ -20,6 +13,16 @@
 .\Output\cgps.o: .\Source\.\mbedLibrary\lib26\LPC1768\system_LPC17xx.h
 .\Output\cgps.o: .\Source\.\mbedLibrary\cmsis_nvic.h
 .\Output\cgps.o: .\Source\.\mbedLibrary\cmsis.h
+.\Output\cgps.o: .\Source\.\Resources\serial\CBuffer.h
+.\Output\cgps.o: .\Source\.\mbedLibrary\mbed.h
+.\Output\cgps.o: C:\Keil\\ARM\RV31\INC\stdio.h
+.\Output\cgps.o: C:\Keil\\ARM\RV31\INC\stdlib.h
+.\Output\cgps.o: C:\Keil\\ARM\RV31\INC\string.h
+.\Output\cgps.o: C:\Keil\\ARM\RV31\INC\math.h
+.\Output\cgps.o: C:\Keil\\ARM\RV31\INC\time.h
+.\Output\cgps.o: .\Source\.\mbedLibrary\error.h
+.\Output\cgps.o: .\Source\.\mbedLibrary\DigitalIn.h
+.\Output\cgps.o: .\Source\.\mbedLibrary\platform.h
 .\Output\cgps.o: .\Source\.\mbedLibrary\PeripheralNames.h
 .\Output\cgps.o: .\Source\.\mbedLibrary\Base.h
 .\Output\cgps.o: C:\Keil\\ARM\RV31\INC\cstdlib
@@ -60,5 +63,10 @@
 .\Output\cgps.o: .\Source\.\mbedLibrary\InterruptIn.h
 .\Output\cgps.o: .\Source\.\mbedLibrary\wait_api.h
 .\Output\cgps.o: .\Source\.\mbedLibrary\rtc_time.h
-.\Output\cgps.o: .\Source\.\Resources\serial\CUart.h
-.\Output\cgps.o: .\Source\.\Resources\serial\CBuffer.h
+.\Output\cgps.o: .\Source\.\Resources\servo\CServo.h
+.\Output\cgps.o: .\Source\.\Resources\sonar\CSrf05.h
+.\Output\cgps.o: .\Source\.\Resources\motor control\CSpeed.h
+.\Output\cgps.o: .\Source\.\Resources\ir distance\C2y0a700.h
+.\Output\cgps.o: .\Source\.\Resources\gps\CGps.h
+.\Output\cgps.o: .\Source\.\Resources\gps\cnmea.h
+.\Output\cgps.o: .\Source\.\Resources\compass\cdcompass.h

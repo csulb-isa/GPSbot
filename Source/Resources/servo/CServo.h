@@ -20,7 +20,8 @@ class CServo
 {
 private:
 	PwmOut _pwm;  				/* Derived object for servo control */
-
+	Ticker _update;
+	int8_t adj_val, set_val;
 public:
 	// constructor
 	CServo(PinName);
@@ -30,6 +31,8 @@ public:
 	// 127 = max, -127 = max and 0 = min
 	int8_t GetPos();       		/* Verified 02-09-10 */
 	void SetPos(int8_t);   		/* Verified 02-09-10 */
+	void SetPos();
+	void UpdatePos(int8_t);
 
 	// parameter passed in degrees
 	uint8_t GetPosDeg();		/* Verified 04-20-10 */

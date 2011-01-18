@@ -30,6 +30,8 @@
 
 // Stuff for debugging
 DigitalOut Status(LED4);
+DigitalOut led1(LED1);
+DigitalOut led2(LED2);
 Ticker flip;
 void fliphandler (void)
 {
@@ -64,7 +66,7 @@ CSonar Sonar4(p21, p23);
 
 // ir distance object detection
 // connection in center of vehicle
-C2y0a700 Ir2(p16);
+C2y0a700 Ir2(p15);
 // connection on left side of vehicle
 C2y0a700 Ir1(p19);
 // connection on right side of vehicle
@@ -90,8 +92,8 @@ int main()
 	Xbee.Enable();
 	
 	// may poll in while loop if it gets too large
-	ParsePcComm.attach(&BuildPcPacket, 0.1);
-	SendPcComm.attach(&TransmitVitals, 1.0);
+	//ParsePcComm.attach(&BuildPcPacket, 0.1);
+	SendPcComm.attach(&TransmitVitals, 0.25);
 
 	CMU.Baud(9600);
 	CMU.Enable();
@@ -102,8 +104,8 @@ int main()
 	// start the GPS receiver and look for packets every
 	// 250 mili-seconds.  Time can be adjusted based on amount
 	// of sentences that are enabled
-	//Gps.Enable();
-	//ParseGps.attach(&Gps, &CGps::BuildPacket, 0.250);
+	Gps.Enable();
+	//ParseGps.attach(&Gps, &CGps::BuildPacket, 1.0);
 	
 	// configure all the sensors on the car
 	// these are the 4 sonar sensors
@@ -133,6 +135,7 @@ int main()
 
 	// Connect to compass and start getting data
 	Compass.Config();
+	Compass.Enable();
 
 	// Indicate that the boot process is complete and entering main
 	// control code
@@ -141,10 +144,9 @@ int main()
 	// here is the main program
 	while(1)
 	{
-	 	// incorporate timed read in class
-		// need hardware to test
-		wait(1);
-		Compass.Read();
+		Gps.BuildPacket();
+		BuildPcPacket();
+
 	}
 }
 
